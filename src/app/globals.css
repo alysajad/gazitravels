@@ -3,25 +3,189 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-dark: #111827;
+  --color-dark-muted: #1F2937;
+  --color-accent: #D4F844;
+  --color-accent-hover: #C0E625;
+  --color-gray-100: #F3F4F6;
+  --color-gray-300: #D1D5DB;
+  --color-gray-500: #6B7280;
+  --color-white: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
+  /* Forcing light mode for this specific design to match screenshot exactly */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-bg: #FAFAFA;
+    --color-surface: #FFFFFF;
+    --color-dark: #111827;
+    --color-dark-muted: #1F2937;
+    --color-accent: #D4F844;
+    --color-accent-hover: #C0E625;
+    --color-gray-100: #F3F4F6;
+    --color-gray-300: #D1D5DB;
+    --color-gray-500: #6B7280;
+    --color-white: #FFFFFF;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-dark);
+  background: var(--color-bg);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-content mx-auto px-6;
+  }
+
+  .section {
+    @apply py-section px-6;
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      @apply py-section-mobile;
+    }
+  }
+
+  .card {
+    @apply bg-surface rounded-card shadow-card transition-all duration-normal ease-out border border-gray-100;
+  }
+
+  .card:hover {
+    @apply shadow-card-hover -translate-y-1;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-button px-6 py-3.5 font-body font-medium text-nav transition-all duration-fast ease-out;
+  }
+
+  .btn-dark {
+    @apply btn bg-dark text-white hover:bg-dark-muted;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent text-dark hover:bg-accent-hover;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-gray-200 text-dark hover:border-dark;
+  }
+
+  .btn-accent-outline {
+    @apply btn border-2 border-accent text-dark hover:bg-accent hover:text-dark;
+  }
+
+  .heading-display {
+    @apply font-display font-bold text-display-xl text-dark tracking-tight;
+  }
+
+  .heading-section {
+    @apply font-display font-bold text-display-md text-dark tracking-tight;
+  }
+
+  .heading-sub {
+    @apply font-body font-medium text-body text-gray-500;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-button bg-accent px-4 py-1.5 text-body-sm font-medium text-dark;
+  }
+
+  .stat-number {
+    @apply font-display font-bold text-5xl text-dark;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-gray-200 bg-surface px-4 py-3 text-body text-dark placeholder-gray-400 transition-all duration-fast;
+  }
+
+  .input:focus {
+    @apply border-accent outline-none ring-2;
+    --tw-ring-color: rgba(212, 248, 68, 0.2);
+  }
+
+  .label {
+    @apply block mb-1.5 text-label font-medium text-gray-500 tracking-wide;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
   }
 }
