@@ -6,7 +6,7 @@ import { ArrowUpRight, Check } from "lucide-react";
 import Link from "next/link";
 
 export function UmrahPackagesSection() {
-  const [activeTab, setActiveTab] = useState("hajj");
+  const [activeTab, setActiveTab] = useState("umrah");
 
   const hajjPackages = [
     {
@@ -80,15 +80,7 @@ export function UmrahPackagesSection() {
             Tailored Pilgrimage <span className="font-bold">Packages for Every Need</span> and Budget.
           </h2>
 
-          <div className="flex bg-gray-100 rounded-full p-1 border border-gray-200 shadow-sm">
-            <button
-              onClick={() => setActiveTab("hajj")}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
-                activeTab === "hajj" ? "bg-dark text-white shadow-sm" : "text-gray-500 hover:text-dark"
-              }`}
-            >
-              Hajj Package
-            </button>
+           <div className="flex bg-gray-100 rounded-full p-1 border border-gray-200 shadow-sm">
             <button
               onClick={() => setActiveTab("umrah")}
               className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
@@ -97,10 +89,18 @@ export function UmrahPackagesSection() {
             >
               Umrah Package
             </button>
+            <button
+              onClick={() => setActiveTab("hajj")}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
+                activeTab === "hajj" ? "bg-dark text-white shadow-sm" : "text-gray-500 hover:text-dark"
+              }`}
+            >
+              Hajj Package
+            </button>
           </div>
         </div>
 
-        <div className={`grid grid-cols-1 md:grid-cols-2 ${currentPackages.length > 2 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-6`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${currentPackages.length > 2 ? 'lg:grid-cols-4' : currentPackages.length === 1 ? 'lg:grid-cols-1 lg:max-w-md lg:mx-auto' : 'lg:grid-cols-3'} gap-6`}>
           {currentPackages.map((pkg, index) => (
             <motion.div
               key={pkg.title}
