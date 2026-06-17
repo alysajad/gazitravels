@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { customerVoices } from "@/data/customer-voices";
 import { Star } from "lucide-react";
-import Image from "next/image";
 
 export function CustomerVoicesSection() {
   return (
@@ -81,7 +80,7 @@ export function CustomerVoicesSection() {
                 </div>
               </div>
               <p className="text-gray-600 text-sm italic leading-relaxed flex-grow">
-                "{voice.review}"
+                &quot;{voice.review}&quot;
               </p>
               
               <div className="absolute bottom-6 right-6 opacity-30">
