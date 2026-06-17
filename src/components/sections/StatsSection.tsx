@@ -41,7 +41,7 @@ export function StatsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
-                className="relative w-full md:w-[400px] aspect-[4/3] rounded-[32px] overflow-hidden"
+                className="relative w-full max-w-[400px] md:w-[400px] aspect-[4/3] rounded-[32px] overflow-hidden"
               >
                 <Image
                   src="/images/pilgrimage/hajj.jpg"
@@ -58,7 +58,7 @@ export function StatsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white rounded-[32px] p-8 shadow-floating w-full md:w-[300px] border border-gray-100"
+                className="bg-white rounded-[32px] p-8 shadow-floating w-full max-w-[300px] md:w-[300px] border border-gray-100"
               >
                 <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center mb-6">
                   <svg className="w-6 h-6 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -73,7 +73,7 @@ export function StatsSection() {
                   href="/contact"
                   className="inline-flex items-center gap-2 bg-dark text-white pl-4 pr-1 py-1 rounded-full font-medium text-xs hover:bg-dark-muted transition-colors duration-fast w-fit"
                 >
-                  Book a Free Call
+                  Book Now
                   <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center text-dark ml-1">
                     <ArrowUpRight className="w-3 h-3" />
                   </div>

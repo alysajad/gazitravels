@@ -22,7 +22,7 @@ export default function Hajj2027Page() {
           <div className="absolute inset-0 bg-[url('/images/pilgrimage/hajj-hero.jpg')] bg-cover bg-center grayscale opacity-30" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNCkiLz48L3N2Zz4=')] bg-repeat opacity-30" />
 
-          <div className="relative z-10 max-w-content mx-auto px-6 py-32">
+          <div className="relative z-10 w-full max-w-content mx-auto px-6 pt-24 md:pt-32 pb-16 md:pb-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -84,10 +84,11 @@ export default function Hajj2027Page() {
               align="center"
               className="mb-12"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+            <div className="flex flex-wrap justify-center gap-8">
               {hajj2027.packages.map((pkg, index) => (
                 <motion.div
                   key={pkg.slug}
+                  className="w-full max-w-sm"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}

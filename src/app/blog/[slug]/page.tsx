@@ -21,7 +21,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-dark overflow-hidden">
+        <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 bg-dark overflow-hidden">
           <div className="absolute inset-0 bg-cover bg-center opacity-40 grayscale mix-blend-overlay" style={{ backgroundImage: `url(${post.image})` }} />
           <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent" />
           

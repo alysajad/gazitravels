@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -7,6 +8,7 @@ import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const contactInfo: Array<{
   icon: React.ReactNode;
@@ -38,13 +40,191 @@ const contactInfo: Array<{
   },
 ];
 
+function ContactForm() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    journeyType: "",
+    duration: "",
+    date: "",
+    travelers: "",
+    message: "",
+  });
+
+  useEffect(() => {
+    setFormData(prev => ({
+      ...prev,
+      journeyType: searchParams.get("journey") || "",
+      duration: searchParams.get("duration") || "",
+      date: searchParams.get("date") || "",
+      travelers: searchParams.get("travelers") || "",
+    }));
+  }, [searchParams]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate form submission
+    setTimeout(() => {
+      router.push("/thank-you");
+    }, 500);
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+            Name *
+          </label>
+          <input
+            type="text"
+            name="name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+            Phone *
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+            placeholder="+91 XXXXX XXXXX"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+          Email
+        </label>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+          placeholder="your@email.com"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+            Journey Type
+          </label>
+          <select 
+            name="journeyType"
+            value={formData.journeyType}
+            onChange={handleChange}
+            className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all duration-fast"
+          >
+            <option value="">Select journey type</option>
+            <option value="Hajj 2027">Hajj 2027</option>
+            <option value="Umrah Package">Umrah Package</option>
+            <option value="Iraq/Iran Ziyarat">Iraq/Iran Ziyarat</option>
+            <option value="Kashmir Tour">Kashmir Tour</option>
+            <option value="umrah">Other Umrah</option>
+            <option value="ziyarat">Other Ziyarat</option>
+            <option value="hajj">Other Hajj</option>
+            <option value="kashmir">Other Kashmir</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+            Duration
+          </label>
+          <input
+            type="text"
+            name="duration"
+            value={formData.duration}
+            onChange={handleChange}
+            className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+            placeholder="e.g. 14 Days"
+          />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+            Preferred Date
+          </label>
+          <input
+            type="text"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+            placeholder="e.g. Upcoming Month"
+          />
+        </div>
+        <div>
+          <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+            Travelers
+          </label>
+          <input
+            type="text"
+            name="travelers"
+            value={formData.travelers}
+            onChange={handleChange}
+            className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+            placeholder="e.g. 2 People"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+          Message
+        </label>
+        <textarea
+          rows={5}
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 resize-none"
+          placeholder="Tell us about your travel plans or questions..."
+        />
+      </div>
+
+      <button type="submit" className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-medium text-dark hover:bg-accent-hover transition-colors duration-fast w-full">
+        Send Message
+        <div className="w-8 h-8 rounded-full bg-dark flex items-center justify-center text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform group-hover:scale-110"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </div>
+      </button>
+    </form>
+  );
+}
+
 export default function ContactPage() {
   return (
     <>
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-gray-100">
+        <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 bg-gray-100">
           <div className="relative z-10 max-w-content mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -76,72 +256,9 @@ export default function ContactPage() {
                   Send Us a Message
                 </h2>
 
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
-                        Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
-                        Phone *
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-                        placeholder="+91 XXXXX XXXXX"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
-                      Journey Type
-                    </label>
-                    <select className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all duration-fast">
-                      <option value="">Select journey type</option>
-                      <option value="umrah">Umrah</option>
-                      <option value="ziyarat">Ziyarat</option>
-                      <option value="hajj">Hajj 2027</option>
-                      <option value="kashmir">Kashmir Tours</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
-                      Message
-                    </label>
-                    <textarea
-                      rows={5}
-                      className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 resize-none"
-                      placeholder="Tell us about your travel plans or questions..."
-                    />
-                  </div>
-
-                  <CTAButton href="#" variant="accent" className="w-full justify-center">
-                    Send Message
-                  </CTAButton>
-                </form>
+                <Suspense fallback={<div className="h-64 flex items-center justify-center">Loading form...</div>}>
+                  <ContactForm />
+                </Suspense>
               </motion.div>
 
               {/* Contact Info */}
@@ -220,7 +337,15 @@ export default function ContactPage() {
                 {/* Map */}
                 <div className="mt-8 rounded-card overflow-hidden shadow-card">
                   <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                    <p className="text-body text-gray-500">Google Maps embed — Head Office, Magam, Budgam, Kashmir</p>
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      allowFullScreen
+                      src="https://www.google.com/maps?q=Gazi+Tours+%26+Travels%2C+3HVW%2BRJX%2C+Main+Market%2C+Gulmarg+Road%2C+Magam%2C+Jammu+and+Kashmir+193401&output=embed"
+                      title="Gazi Tours & Travels Office Location"
+                    ></iframe>
                   </div>
                 </div>
               </motion.div>

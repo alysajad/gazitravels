@@ -9,6 +9,7 @@ import { StatsSection } from "@/components/sections/StatsSection";
 import { UmrahPackagesSection } from "@/components/sections/PackageSection";
 import { HotelSection } from "@/components/sections/HotelSection";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { CustomerVoicesSection } from "@/components/sections/CustomerVoicesSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <StatsSection />
         <UmrahPackagesSection />
         <HotelSection />
+        <CustomerVoicesSection />
         <FAQSection />
         <CTASection />
       </main>

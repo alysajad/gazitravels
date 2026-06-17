@@ -34,7 +34,7 @@ export default function ZiyaratPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-gray-100">
+        <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 bg-gray-100">
           <div className="absolute inset-0 bg-[url('/images/pilgrimage/ziyarat-hero.jpg')] bg-cover bg-center grayscale opacity-30" />
           <div className="relative z-10 max-w-content mx-auto px-6">
             <motion.div
@@ -54,15 +54,17 @@ export default function ZiyaratPage() {
         {/* Country Filter */}
         <section className="py-8 bg-surface border-b border-gray-100">
           <div className="max-w-content mx-auto px-6">
-            <div className="flex flex-wrap items-center gap-4">
-              <span className="text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4 w-full">
+              <span className="text-label font-mono font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">
                 Destination:
               </span>
-              <TabSwitcher
-                tabs={countries}
-                activeTab={activeCountry}
-                onTabChange={setActiveCountry}
-              />
+              <div className="w-full overflow-x-auto scrollbar-hide pb-2 -mb-2">
+                <TabSwitcher
+                  tabs={countries}
+                  activeTab={activeCountry}
+                  onTabChange={setActiveCountry}
+                />
+              </div>
             </div>
           </div>
         </section>

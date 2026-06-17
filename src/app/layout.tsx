@@ -85,7 +85,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://wa.me" />
       </head>
-      <body className="antialiased font-body text-body bg-bg text-dark">
+      <body className="antialiased font-body text-body bg-bg text-dark overflow-x-hidden">
         {children}
       </body>
     </html>

@@ -17,7 +17,7 @@ export default function UmrahPackageDetails({ params }: { params: { slug: string
   return (
     <>
       <Navbar />
-      <main className="pt-32 pb-20 bg-gray-50">
+      <main className="pt-24 md:pt-32 pb-16 md:pb-20 bg-gray-50">
         <div className="max-w-content mx-auto px-6">
           <div className="bg-white rounded-[32px] p-8 md:p-12 shadow-sm border border-gray-100">
             <div className="flex flex-col md:flex-row gap-12">

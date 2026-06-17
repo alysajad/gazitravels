@@ -36,8 +36,8 @@ export default function KashmirPage() {
       <main>
         {/* Hero */}
         <section className="relative min-h-[55vh] flex items-center overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/kashmir/kashmir-hero.jpg')] bg-cover bg-center grayscale opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+          <div className="absolute inset-0 bg-[url('/images/kashmir/colorful-hero.png')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
 
           <div className="relative z-10 max-w-content mx-auto px-4 sm:px-6 py-24 sm:py-32 w-full">
             <motion.div
@@ -65,15 +65,17 @@ export default function KashmirPage() {
         {/* Filter */}
         <section className="py-6 sm:py-8 bg-surface border-b border-gray-100">
           <div className="max-w-content mx-auto px-4 sm:px-6">
-            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide pb-1">
-              <span className="text-label font-mono font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap flex-shrink-0">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4 w-full">
+              <span className="text-label font-mono font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">
                 Season:
               </span>
-              <TabSwitcher
-                tabs={seasons}
-                activeTab={activeSeason}
-                onTabChange={setActiveSeason}
-              />
+              <div className="w-full overflow-x-auto scrollbar-hide pb-2 -mb-2">
+                <TabSwitcher
+                  tabs={seasons}
+                  activeTab={activeSeason}
+                  onTabChange={setActiveSeason}
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -27,7 +27,7 @@ export function CTASection() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <CTAButton href="/contact" variant="accent">
-              Book a Free Call
+              Book Now
             </CTAButton>
             <CTAButton
               href="https://wa.me/917006604820?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enquire%20about%20packages."

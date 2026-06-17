@@ -36,7 +36,7 @@ export function AboutStrip() {
             {/* Background decoration shape like in screenshot (optional soft circle) */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gray-100 rounded-full blur-3xl opacity-50 -z-10" />
             
-            <div className="relative w-[300px] h-[450px] md:w-[350px] md:h-[500px] rounded-[200px] overflow-hidden border-8 border-white shadow-floating">
+            <div className="relative w-full max-w-[300px] md:max-w-[350px] aspect-[2/3] rounded-[200px] overflow-hidden border-8 border-white shadow-floating mx-auto lg:mx-0">
               <Image
                 src="/images/pilgrimage/about-image.jpg"
                 alt="Pilgrim praying"

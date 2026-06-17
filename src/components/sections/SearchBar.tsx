@@ -44,10 +44,14 @@ export function SearchBar() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (journeyType === "Hajj 2027") router.push("/hajj-2027");
-    else if (journeyType === "Iraq/Iran Ziyarat") router.push("/ziyarat");
-    else if (journeyType === "Kashmir Tour") router.push("/kashmir");
-    else router.push("/umrah");
+    const query = new URLSearchParams({
+      journey: journeyType,
+      duration: duration === "Other" ? customDuration : duration,
+      date: preferredDate === "Other" ? customDate : preferredDate,
+      travelers: travelers,
+    }).toString();
+    
+    router.push(`/contact?${query}`);
   };
 
   return (

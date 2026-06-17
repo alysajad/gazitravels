@@ -16,7 +16,7 @@ export default function BlogPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-gray-100">
+        <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 bg-gray-100">
           <div className="relative z-10 max-w-content mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen pt-32 pb-20 overflow-hidden flex flex-col items-center bg-bg">
+    <section className="relative min-h-screen pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden flex flex-col items-center bg-bg">
       {/* Background Hero Image */}
       <div className="absolute inset-0 -z-20">
         <Image
@@ -121,17 +121,17 @@ export function HeroSection() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="hidden md:flex absolute right-0 bottom-40 flex-col items-center gap-2"
+            className="hidden md:flex absolute right-0 bottom-40 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-gray-200 flex-col items-center gap-3"
           >
             <span className="text-xs font-semibold text-gray-700">Our Affiliate Hotels</span>
             <div className="flex items-center gap-2">
-               <Link href="/hotels" className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm group cursor-pointer block">
+               <Link href="/hotels" className="w-12 h-12 rounded-xl overflow-hidden relative shadow-sm group cursor-pointer block">
                   <Image src="/images/hotels/swissotel-maqam.png" unoptimized alt="Swissôtel Al Maqam" fill className="object-cover grayscale transition-all duration-normal group-hover:grayscale-0 group-hover:scale-110" />
                </Link>
-               <Link href="/hotels" className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm -translate-y-4 group cursor-pointer block">
+               <Link href="/hotels" className="w-12 h-12 rounded-xl overflow-hidden relative shadow-sm group cursor-pointer block">
                   <Image src="/images/hotels/pullman-zamzam.png" unoptimized alt="Pullman Zamzam" fill className="object-cover grayscale transition-all duration-normal group-hover:grayscale-0 group-hover:scale-110" />
                </Link>
-               <Link href="/hotels" className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm group cursor-pointer block">
+               <Link href="/hotels" className="w-12 h-12 rounded-xl overflow-hidden relative shadow-sm group cursor-pointer block">
                   <Image src="/images/hotels/concorde-madinah.png" unoptimized alt="Concorde Madinah" fill className="object-cover grayscale transition-all duration-normal group-hover:grayscale-0 group-hover:scale-110" />
                </Link>
             </div>
