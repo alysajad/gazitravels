@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
 
@@ -52,14 +53,18 @@ export function Navbar() {
         <div className="max-w-content mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-dark flex items-center justify-center">
-                <span className="font-display font-bold text-lg text-accent">
-                  G
-                </span>
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-12 h-12 relative flex-shrink-0">
+                <Image
+                  src="/images/team/logo.png"
+                  alt="Gazi Tour & Travels"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
-              <span className="font-display font-bold text-xl text-dark tracking-tight">
-                Gazi Tour & Travels
+              <span className="font-display font-bold text-lg text-dark tracking-tight leading-tight hidden sm:block">
+                Gazi Tour &<br className="hidden xl:block" /> Travels
               </span>
             </Link>
 

@@ -35,26 +35,26 @@ export default function KashmirPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[60vh] flex items-center overflow-hidden">
+        <section className="relative min-h-[55vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/kashmir/kashmir-hero.jpg')] bg-cover bg-center grayscale opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
-          <div className="relative z-10 max-w-content mx-auto px-6 py-32">
+          <div className="relative z-10 max-w-content mx-auto px-4 sm:px-6 py-24 sm:py-32 w-full">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="max-w-3xl"
             >
-              <span className="inline-flex items-center gap-1.5 rounded-button bg-white/20 backdrop-blur-sm px-3 py-1 text-label font-mono font-medium text-white uppercase tracking-wider mb-6">
+              <span className="inline-flex items-center gap-1.5 rounded-button bg-white/20 backdrop-blur-sm px-3 py-1 text-label font-mono font-medium text-white uppercase tracking-wider mb-4 sm:mb-6">
                 Kashmir Tours
               </span>
 
-              <h1 className="font-display font-bold text-display-xl text-white text-balance">
+              <h1 className="font-display font-bold text-[clamp(32px,5vw,72px)] leading-tight text-white text-balance">
                 Explore the Paradise on Earth — Kashmir
               </h1>
 
-              <p className="mt-8 text-body-lg text-white/80 max-w-2xl">
+              <p className="mt-4 sm:mt-8 text-sm sm:text-body-lg text-white/80 max-w-2xl">
                 Discover the natural beauty of Kashmir with our carefully curated tour
                 packages. From the serene Dal Lake to the majestic Gulmarg gondola.
               </p>
@@ -63,10 +63,10 @@ export default function KashmirPage() {
         </section>
 
         {/* Filter */}
-        <section className="py-8 bg-surface border-b border-gray-100">
-          <div className="max-w-content mx-auto px-6">
-            <div className="flex flex-wrap items-center gap-4">
-              <span className="text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+        <section className="py-6 sm:py-8 bg-surface border-b border-gray-100">
+          <div className="max-w-content mx-auto px-4 sm:px-6">
+            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide pb-1">
+              <span className="text-label font-mono font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap flex-shrink-0">
                 Season:
               </span>
               <TabSwitcher
@@ -80,15 +80,15 @@ export default function KashmirPage() {
 
         {/* Packages */}
         <section className="section">
-          <div className="max-w-content mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-content mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
               {filteredPackages.map((pkg, index) => (
                 <motion.div
                   key={pkg.slug}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
                 >
                   <Link
                     href={`/kashmir/${pkg.slug}`}
@@ -100,15 +100,15 @@ export default function KashmirPage() {
                         style={{ backgroundImage: `url(${pkg.image})` }}
                       />
                       {/* Top Badges */}
-                      <div className="absolute top-3 left-3 flex items-center gap-2">
+                      <div className="absolute top-3 left-3">
                         <span className="inline-flex items-center px-2 py-1 text-[10px] font-bold text-white bg-green-500 rounded uppercase tracking-wider">
                           {pkg.tier}
                         </span>
                       </div>
-                      <div className="absolute top-3 right-3 flex items-center gap-2">
+                      <div className="absolute top-3 right-3 flex flex-col items-end gap-1">
                         {pkg.popular && (
                           <span className="inline-flex items-center px-2 py-1 text-[10px] font-bold text-white bg-orange-500 rounded uppercase tracking-wider">
-                            ★ Most Popular
+                            ★ Popular
                           </span>
                         )}
                         <span className="inline-flex items-center px-2 py-1 text-[10px] font-bold text-white bg-emerald-500 rounded uppercase tracking-wider">
@@ -127,18 +127,18 @@ export default function KashmirPage() {
                       </div>
                     </div>
 
-                    <div className="p-6">
-                      <h3 className="font-display font-bold text-lg text-[#2A3546] mb-1 group-hover:text-gray-600 transition-colors duration-fast uppercase">
+                    <div className="p-4 sm:p-6">
+                      <h3 className="font-display font-bold text-base sm:text-lg text-[#2A3546] mb-1 group-hover:text-gray-600 transition-colors duration-fast uppercase">
                         {pkg.title}
                       </h3>
-                      <p className="text-sm text-gray-500 mb-4">{pkg.route}</p>
+                      <p className="text-sm text-gray-500 mb-3 sm:mb-4">{pkg.route}</p>
 
-                      <div className="flex items-center justify-between pt-4 pb-4 border-y border-gray-100">
+                      <div className="flex items-center justify-between pt-3 pb-3 sm:pt-4 sm:pb-4 border-y border-gray-100">
                         <div>
                           <span className="text-xs font-medium text-gray-400 uppercase tracking-wider block mb-0.5">
                             Starting <span className="line-through">₹{pkg.originalPrice.toLocaleString('en-IN')}</span>
                           </span>
-                          <div className="font-display font-bold text-2xl text-orange-500">
+                          <div className="font-display font-bold text-xl sm:text-2xl text-orange-500">
                             ₹{pkg.price.toLocaleString('en-IN')}
                           </div>
                         </div>
@@ -148,18 +148,18 @@ export default function KashmirPage() {
                         </div>
                       </div>
 
-                      <div className="py-4 space-y-2">
+                      <div className="py-3 sm:py-4 space-y-1.5 sm:space-y-2">
                         {pkg.highlights.map((highlight, i) => (
                           <div key={i} className="flex items-start gap-2">
                             <svg className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                             </svg>
-                            <span className="text-sm text-gray-600">{highlight}</span>
+                            <span className="text-xs sm:text-sm text-gray-600">{highlight}</span>
                           </div>
                         ))}
                       </div>
 
-                      <div className="grid grid-cols-2 gap-3 pt-2">
+                      <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-2">
                         <div className="flex items-center justify-center w-full py-2.5 bg-[#1B2A3B] hover:bg-[#2A3546] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors">
                           View Details →
                         </div>

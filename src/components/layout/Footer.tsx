@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const quickLinks = [
@@ -60,10 +61,13 @@ export function Footer() {
           {/* Logo & Tagline */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                <span className="font-display font-bold text-lg text-dark">
-                  G
-                </span>
+              <div className="w-14 h-14 relative flex-shrink-0">
+                <Image
+                  src="/images/team/logo.png"
+                  alt="Gazi Tour & Travels"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="font-body font-semibold text-body text-white">
                 Gazi Tour & Travels

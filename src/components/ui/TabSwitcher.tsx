@@ -24,7 +24,7 @@ export function TabSwitcher({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-1 p-1 bg-gray-100 rounded-button",
+        "inline-flex flex-shrink-0 items-center gap-1 p-1 bg-gray-100 rounded-button",
         className
       )}
     >
@@ -33,7 +33,7 @@ export function TabSwitcher({
           key={tab.id}
           onClick={() => onTabChange(tab.id)}
           className={cn(
-            "relative px-5 py-2.5 text-label font-mono font-medium uppercase tracking-wider rounded-button transition-colors duration-fast",
+            "relative px-3 sm:px-5 py-2 sm:py-2.5 text-label font-mono font-medium uppercase tracking-wider rounded-button transition-colors duration-fast whitespace-nowrap",
             activeTab === tab.id ? "text-dark" : "text-gray-500 hover:text-dark"
           )}
         >
