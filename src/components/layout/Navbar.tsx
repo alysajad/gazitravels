@@ -9,10 +9,10 @@ import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Package", href: "/umrah", hasDropdown: true },
-  { name: "Guide", href: "/hajj-2027" },
-  { name: "Expertise", href: "/ziyarat" },
-  { name: "Kashmir Package", href: "/kashmir" },
+  { name: "Umrah", href: "/umrah", hasDropdown: true },
+  { name: "Hajj 2027", href: "/hajj-2027" },
+  { name: "Ziyarat", href: "/ziyarat" },
+  { name: "Kashmir", href: "/kashmir" },
   { name: "Blog", href: "/blog" },
 ];
 
@@ -53,8 +53,8 @@ export function Navbar() {
         <div className="max-w-content mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-12 h-12 relative flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2 group/logo">
+              <div className="w-12 h-12 relative flex-shrink-0 transition-transform duration-normal ease-out group-hover/logo:scale-110 group-hover/logo:rotate-[5deg]">
                 <Image
                   src="/images/team/logo.png"
                   alt="Gazi Tour & Travels"

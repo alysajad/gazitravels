@@ -8,62 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ArrowUpRight, Clock, Calendar } from "lucide-react";
 import Link from "next/link";
 
-const blogPosts = [
-  {
-    slug: "umrah-preparation-guide",
-    title: "Complete Umrah Preparation Guide for First-Time Pilgrims",
-    category: "Umrah Tips",
-    date: "2024-01-15",
-    readTime: "8 min read",
-    excerpt: "Everything you need to know before your first Umrah journey, from documentation to spiritual preparation.",
-    image: "/images/pilgrimage/blog-umrah.jpg",
-  },
-  {
-    slug: "ziyarat-iraq-guide",
-    title: "A Spiritual Guide to Ziyarat in Iraq — Najaf, Karbala & Beyond",
-    category: "Ziyarat Guides",
-    date: "2024-01-10",
-    readTime: "10 min read",
-    excerpt: "Discover the sacred shrines of Iraq and the spiritual significance of each holy site.",
-    image: "/images/pilgrimage/blog-iraq.jpg",
-  },
-  {
-    slug: "kashmir-travel-tips",
-    title: "Best Time to Visit Kashmir — A Seasonal Travel Guide",
-    category: "Kashmir Travel",
-    date: "2024-01-05",
-    readTime: "6 min read",
-    excerpt: "Plan your Kashmir trip with our comprehensive seasonal guide covering weather, activities, and recommendations.",
-    image: "/images/kashmir/blog-kashmir.jpg",
-  },
-  {
-    slug: "hajj-2027-updates",
-    title: "Hajj 2027 — What We Know So Far",
-    category: "Hajj 2027 Updates",
-    date: "2024-01-01",
-    readTime: "5 min read",
-    excerpt: "Latest updates on Hajj 2027 quotas, registration process, and what to expect.",
-    image: "/images/pilgrimage/blog-hajj.jpg",
-  },
-  {
-    slug: "ihram-guide",
-    title: "Understanding Ihram — Rules, Prayer, and Spiritual Meaning",
-    category: "Umrah Tips",
-    date: "2023-12-28",
-    readTime: "7 min read",
-    excerpt: "A detailed guide to Ihram — the sacred state pilgrims enter before performing Umrah or Hajj.",
-    image: "/images/pilgrimage/blog-ihram.jpg",
-  },
-  {
-    slug: "mashhad-ziyarat-guide",
-    title: "Visiting Imam Reza's Shrine in Mashhad — A Complete Guide",
-    category: "Ziyarat Guides",
-    date: "2023-12-20",
-    readTime: "9 min read",
-    excerpt: "Everything you need to know about visiting the grand shrine complex of Imam Reza (AS) in Mashhad, Iran.",
-    image: "/images/pilgrimage/blog-mashhad.jpg",
-  },
-];
+import { blogPosts } from "@/data/blog-posts";
 
 export default function BlogPage() {
   return (

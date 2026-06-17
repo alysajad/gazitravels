@@ -41,8 +41,8 @@ export function GallerySection() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className={`object-cover object-center transition-transform duration-slow ease-out group-hover:scale-105 ${
-                  image.type === "grayscale" ? "grayscale" : "bg-gray-50 object-contain"
+                className={`object-cover object-center transition-all duration-slow ease-out group-hover:scale-105 ${
+                  image.type === "grayscale" ? "grayscale group-hover:grayscale-0" : "bg-gray-50 object-contain"
                 }`}
                 sizes={index === 0 ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 50vw, 33vw"}
               />

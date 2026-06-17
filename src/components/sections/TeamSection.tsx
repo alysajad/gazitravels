@@ -26,9 +26,9 @@ export function TeamSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-surface rounded-card shadow-card overflow-hidden transition-all duration-normal ease-out hover:shadow-card-hover hover:-translate-y-1"
             >
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden group/img">
                 <div
-                  className="w-full h-full bg-cover bg-center grayscale transition-transform duration-slow ease-out hover:scale-105"
+                  className="w-full h-full bg-cover bg-center grayscale group-hover/img:grayscale-0 transition-all duration-slow ease-out group-hover/img:scale-105"
                   style={{ backgroundImage: `url(${member.image})` }}
                 />
               </div>

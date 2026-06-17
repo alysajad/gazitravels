@@ -16,9 +16,9 @@ export function FounderSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-[3/4] rounded-card overflow-hidden">
+            <div className="aspect-[3/4] rounded-card overflow-hidden group/img">
               <div
-                className="w-full h-full bg-cover bg-center grayscale"
+                className="w-full h-full bg-cover bg-center grayscale group-hover/img:grayscale-0 transition-all duration-slow ease-out group-hover/img:scale-105"
                 style={{ backgroundImage: `url(${founder.image})` }}
               />
             </div>

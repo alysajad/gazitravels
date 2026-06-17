@@ -30,14 +30,14 @@ export function CTAButton({
     dark: "bg-dark text-white hover:bg-dark-muted pl-6 pr-2 py-2 gap-3",
     accent: "bg-accent text-dark hover:bg-accent-hover pl-6 pr-2 py-2 gap-3",
     outline: "border-2 border-gray-200 text-dark hover:border-dark px-6 py-3.5 gap-2",
-    "accent-outline": "border-2 border-accent text-dark hover:bg-accent hover:text-dark px-6 py-3.5 gap-2",
+    "accent-outline": "border-2 border-white/40 text-white hover:bg-white hover:text-dark px-6 py-3.5 gap-2",
   };
 
   const iconStyles = {
     dark: "bg-accent text-dark w-8 h-8",
     accent: "bg-dark text-white w-8 h-8",
     outline: "bg-gray-100 text-dark group-hover:bg-dark group-hover:text-white w-5 h-5",
-    "accent-outline": "bg-accent/20 text-dark w-5 h-5",
+    "accent-outline": "bg-white/20 text-white group-hover:bg-dark group-hover:text-white w-5 h-5",
   };
 
   return (

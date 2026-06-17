@@ -1,3 +1,13 @@
+export interface HajjPackage {
+  slug: string;
+  title: string;
+  tier: string;
+  price: number;
+  duration: string;
+  description: string;
+  highlights: string[];
+}
+
 export const hajj2027 = {
   title: "Hajj 2027",
   status: "Coming Soon",
@@ -23,4 +33,20 @@ export const hajj2027 = {
     author: "Haji Zakir Mohammad Abbas",
     role: "CEO, Gazi Tour & Travels",
   },
+  packages: [
+    {
+      slug: "hajj-shifting-package",
+      title: "Hajj Shifting Package",
+      tier: "Premium",
+      price: 650000,
+      duration: "30-40 Days",
+      description: "Full Hajj package with hotel shifting between Mecca, Mina & Arafat. Includes visa, flights, accommodation & Qafila leaders.",
+      highlights: [
+        "Hajj Visa & Return Flights",
+        "Hotel Shifting — Mecca, Mina & Arafat",
+        "Dedicated Kashmiri Qafila Leaders",
+        "All Rituals Guidance & Transport"
+      ],
+    }
+  ],
 };

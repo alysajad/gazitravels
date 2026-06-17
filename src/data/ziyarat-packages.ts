@@ -9,9 +9,70 @@ export interface ZiyaratPackage {
   description: string;
   highlights: string[];
   image: string;
+  tiers?: {
+    name: string;
+    price: number;
+    popular?: boolean;
+  }[];
 }
 
 export const ziyaratPackages: ZiyaratPackage[] = [
+  {
+    slug: "grand-ziyarat-iraq-iran",
+    title: "Grand Ziyarat — Iraq + Iran",
+    country: "Combined",
+    destinations: ["Karbala", "Najaf", "Kadhimiya", "Samarra", "Mashhad", "Qom"],
+    shrines: [
+      "Shrine of Imam Hussain (AS) — Karbala",
+      "Shrine of Hazrat Abbas (AS) — Karbala",
+      "Shrine of Imam Ali (AS) — Najaf",
+      "Shrine of Imam Musa al-Kadhim (AS) — Kadhimiya",
+      "Shrine of Imam Ali al-Hadi (AS) — Samarra",
+      "Shrine of Imam Hasan al-Askari (AS) — Samarra",
+      "Shrine of Imam Reza (AS) — Mashhad",
+      "Shrine of Hazrat Fatima al-Masumah (SA) — Qom",
+    ],
+    price: 120000,
+    duration: "18 Days",
+    description: "A complete spiritual journey covering the holy shrines of Iraq (Karbala, Najaf, Kadhimiya, Samarra) and Iran (Mashhad, Qom). Kashmiri group Qafila leaders and scheduled Majalis & spiritual sessions throughout.",
+    highlights: [
+      "Iraq: Karbala, Najaf, Kadhimiya, Samarra",
+      "Iran: Mashhad, Qom",
+      "Kashmiri Group Qafila leaders",
+      "Scheduled Majalis & spiritual sessions",
+      "Full board halal meals",
+      "AC transportation throughout",
+    ],
+    image: "/images/pilgrimage/karbala.jpg",
+    tiers: [
+      { name: "Economy", price: 120000 },
+      { name: "Semi Deluxe", price: 130000, popular: true },
+      { name: "Deluxe", price: 150000 },
+    ],
+  },
+  {
+    slug: "arbaeen-walk-15-days",
+    title: "Arbaeen Walk — 15 Days",
+    country: "Arbaeen",
+    destinations: ["Najaf", "Karbala"],
+    shrines: [
+      "Shrine of Imam Ali (AS) — Najaf",
+      "Shrine of Imam Hussain (AS) — Karbala",
+      "Arbaeen Walk (80km Najaf to Karbala)",
+    ],
+    price: 115000,
+    duration: "15 Days",
+    description: "The world's largest annual peaceful gathering — the sacred 80km walk from Najaf to Karbala, honouring Imam Hussain (AS). Limited slots available for Arbaeen 2026.",
+    highlights: [
+      "The 80km Najaf to Karbala walk",
+      "15 Days full itinerary",
+      "Full logistical support & baggage transport",
+      "Dedicated medical aid & onsite guides",
+      "Mawkib arrangements & spiritual Majalis",
+      "Early registration essential",
+    ],
+    image: "/images/pilgrimage/arbaeen.jpg",
+  },
   {
     slug: "iraq-ziyarat-7-days",
     title: "Iraq Ziyarat — 7 Days",
@@ -56,28 +117,7 @@ export const ziyaratPackages: ZiyaratPackage[] = [
       "Free day in Karbala for ibadah",
       "Samarra shrines visit",
     ],
-    image: "/images/pilgrimage/karbala.jpg",
-  },
-  {
-    slug: "arbaeen-10-days",
-    title: "Arbaeen Package — 10 Days",
-    country: "Arbaeen",
-    destinations: ["Najaf", "Karbala"],
-    shrines: [
-      "Shrine of Imam Ali (AS) — Najaf",
-      "Shrine of Imam Hussain (AS) — Karbala",
-      "Arbaeen Walk (80km Najaf to Karbala)",
-    ],
-    price: 110000,
-    duration: "10 Days",
-    description: "Join the world's largest annual pilgrimage — over 22 million pilgrims walk from Najaf to Karbala to commemorate Imam Hussain (AS).",
-    highlights: [
-      "Participation in Arbaeen Walk",
-      "Group supervisor + scholar",
-      "Communal food tents (Mawakib)",
-      "Early registration essential",
-    ],
-    image: "/images/pilgrimage/iran-mashhad.jpg",
+    image: "/images/pilgrimage/iraq-ziyarat.jpg",
   },
   {
     slug: "iran-ziyarat-mashhad-7-days",
@@ -99,7 +139,7 @@ export const ziyaratPackages: ZiyaratPackage[] = [
       "Private AC vehicle for city Ziyarat",
       "Full board halal meals",
     ],
-    image: "/images/pilgrimage/iran-qom.jpg",
+    image: "/images/pilgrimage/mashhad.jpg",
   },
   {
     slug: "iran-ziyarat-mashhad-qom-10-days",
@@ -121,29 +161,6 @@ export const ziyaratPackages: ZiyaratPackage[] = [
       "Full board halal meals",
       "Jamkaran Mosque visit",
     ],
-    image: "/images/pilgrimage/combined-ziyarat.jpg",
-  },
-  {
-    slug: "iraq-iran-combined-14-days",
-    title: "Iraq + Iran Combined — 14 Days",
-    country: "Combined",
-    destinations: ["Najaf", "Karbala", "Baghdad", "Mashhad", "Qom"],
-    shrines: [
-      "Shrine of Imam Ali (AS) — Najaf",
-      "Shrine of Imam Hussain (AS) — Karbala",
-      "Shrine of Imam Kadhim (AS) — Baghdad",
-      "Shrine of Imam Reza (AS) — Mashhad",
-      "Shrine of Hazrat Masumah (SA) — Qom",
-    ],
-    price: 135000,
-    duration: "14 Days",
-    description: "The ultimate Ziyarat journey covering both Iraq and Iran's most sacred Shia shrines, guided by scholars throughout.",
-    highlights: [
-      "Return economy flights + internal segment",
-      "AC group bus (Iraq) + private vehicle (Iran)",
-      "Indian tour manager full-trip",
-      "Qualified Islamic scholar throughout",
-    ],
-    image: "/images/pilgrimage/arbaeen.jpg",
+    image: "/images/pilgrimage/iran-qom.jpg",
   },
 ];

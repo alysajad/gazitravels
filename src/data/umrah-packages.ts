@@ -43,7 +43,7 @@ export const umrahPackages: UmrahPackage[] = [
       "Jannatul Baqi",
     ],
     description: "An affordable pilgrimage with all essential arrangements, designed for those seeking a meaningful Umrah experience without compromise on spiritual guidance.",
-    image: "/images/pilgrimage/economy-umrah.jpg",
+    image: "/images/pilgrimage/economy-umrah.png",
   },
   {
     slug: "standard-umrah-14-days",
@@ -70,7 +70,7 @@ export const umrahPackages: UmrahPackage[] = [
       "Jabal Thawr",
     ],
     description: "A comfortable and spiritually enriching journey with premium accommodation, dedicated guidance, and extended time in the holy cities.",
-    image: "/images/pilgrimage/standard-umrah.jpg",
+    image: "/images/pilgrimage/standard-umrah.png",
   },
   {
     slug: "premium-umrah-14-days",
@@ -96,7 +96,7 @@ export const umrahPackages: UmrahPackage[] = [
       "Jeddah corniche visit",
     ],
     description: "The finest pilgrimage experience with luxury accommodation, personal guidance, and comprehensive spiritual programmes tailored to your pace.",
-    image: "/images/pilgrimage/premium-umrah.jpg",
+    image: "/images/pilgrimage/premium-umrah.png",
   },
   {
     slug: "family-umrah-14-days",
@@ -121,7 +121,7 @@ export const umrahPackages: UmrahPackage[] = [
       "Taif day trip",
     ],
     description: "Designed for families undertaking this sacred journey together, with careful attention to comfort, safety, and age-appropriate pacing.",
-    image: "/images/pilgrimage/family-umrah.jpg",
+    image: "/images/pilgrimage/family-umrah.png",
   },
   {
     slug: "ramadan-umrah-10-days",
@@ -145,6 +145,6 @@ export const umrahPackages: UmrahPackage[] = [
       "Full Madinah Ziyarat",
     ],
     description: "Experience the blessed month of Ramadan in the holy cities, with spiritual programmes designed to maximise the rewards of this sacred time.",
-    image: "/images/pilgrimage/ramadan-umrah.jpg",
+    image: "/images/pilgrimage/ramadan-umrah.png",
   },
 ];

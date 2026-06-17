@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { CountdownTimer } from "@/components/ui/CountdownTimer";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { PackageCard } from "@/components/packages/PackageCard";
 import { hajj2027 } from "@/data/hajj-2027";
 import { hajjFaqs } from "@/data/faqs";
 
@@ -70,6 +71,32 @@ export default function Hajj2027Page() {
               </p>
               <CountdownTimer targetDate={hajj2027.countdownDate} />
             </motion.div>
+          </div>
+        </section>
+
+        {/* Packages */}
+        <section className="section bg-surface border-t border-gray-100">
+          <div className="max-w-content mx-auto">
+            <SectionHeading
+              badge="Packages"
+              title="Featured Hajj Packages"
+              subtitle="Explore our expected packages for the upcoming Hajj season."
+              align="center"
+              className="mb-12"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+              {hajj2027.packages.map((pkg, index) => (
+                <motion.div
+                  key={pkg.slug}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <PackageCard package={pkg} type="hajj" />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 

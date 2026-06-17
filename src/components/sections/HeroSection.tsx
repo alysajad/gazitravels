@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Star } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -110,7 +111,7 @@ export function HeroSection() {
             </div>
             <div>
               <p className="text-xs font-medium text-gray-700 leading-snug">
-                123 Organic Street, <span className="font-bold text-dark">Green Town</span>, New York, USA
+                Masjid al-Haram, <span className="font-bold text-dark">Makkah</span>, Saudi Arabia
               </p>
             </div>
           </motion.div>
@@ -122,17 +123,17 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.9 }}
             className="hidden md:flex absolute right-0 bottom-40 flex-col items-center gap-2"
           >
-            <span className="text-xs font-semibold text-gray-700">Our Affiliate Hotel</span>
+            <span className="text-xs font-semibold text-gray-700">Our Affiliate Hotels</span>
             <div className="flex items-center gap-2">
-               <div className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm">
-                  <Image src="/images/hotels/swissotel-maqam.jpg" unoptimized alt="Hotel 1" fill className="object-cover" />
-               </div>
-               <div className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm -translate-y-4">
-                  <Image src="/images/hotels/pullman-zamzam.jpg" unoptimized alt="Hotel 2" fill className="object-cover" />
-               </div>
-               <div className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm">
-                  <Image src="/images/hotels/concorde-madinah.jpg" unoptimized alt="Hotel 3" fill className="object-cover" />
-               </div>
+               <Link href="/hotels" className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm group cursor-pointer block">
+                  <Image src="/images/hotels/swissotel-maqam.png" unoptimized alt="Swissôtel Al Maqam" fill className="object-cover grayscale transition-all duration-normal group-hover:grayscale-0 group-hover:scale-110" />
+               </Link>
+               <Link href="/hotels" className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm -translate-y-4 group cursor-pointer block">
+                  <Image src="/images/hotels/pullman-zamzam.png" unoptimized alt="Pullman Zamzam" fill className="object-cover grayscale transition-all duration-normal group-hover:grayscale-0 group-hover:scale-110" />
+               </Link>
+               <Link href="/hotels" className="w-12 h-16 rounded-xl overflow-hidden relative shadow-sm border border-white/50 bg-white/80 backdrop-blur-sm group cursor-pointer block">
+                  <Image src="/images/hotels/concorde-madinah.png" unoptimized alt="Concorde Madinah" fill className="object-cover grayscale transition-all duration-normal group-hover:grayscale-0 group-hover:scale-110" />
+               </Link>
             </div>
           </motion.div>
         </motion.div>
