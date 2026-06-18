@@ -11,6 +11,7 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { PackageCard } from "@/components/packages/PackageCard";
 import { hajj2027 } from "@/data/hajj-2027";
 import { hajjFaqs } from "@/data/faqs";
+import { CldImage } from "next-cloudinary";
 
 export default function Hajj2027Page() {
   return (
@@ -130,6 +131,51 @@ export default function Hajj2027Page() {
                     {reason.title}
                   </h3>
                   <p className="text-body text-gray-500">{reason.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Glimpses of Hajj */}
+        <section className="py-20 bg-dark text-white overflow-hidden relative">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNCkiLz48L3N2Zz4=')] bg-repeat opacity-20" />
+          <div className="max-w-content mx-auto px-6 relative z-10">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+              <div>
+                <span className="inline-block px-3 py-1 bg-white/10 text-white/70 text-xs font-mono tracking-wider uppercase rounded-full mb-4">Gallery</span>
+                <h2 className="font-display font-medium text-3xl md:text-4xl text-white">Glimpses of Hajj</h2>
+                <p className="mt-4 text-white/60 max-w-xl">
+                  Experience the spiritual journey through our collection of memories from previous Hajj seasons.
+                </p>
+              </div>
+              <CTAButton href="/gallery" variant="accent-outline" className="border-white/20 text-white hover:bg-white/10">
+                View Full Gallery
+              </CTAButton>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[1, 2, 3, 4].map((item, index) => (
+                <motion.div
+                  key={`glimpse-${index}`}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={`relative rounded-2xl overflow-hidden aspect-square bg-white/5 border border-white/10 group ${
+                    index === 0 || index === 3 ? "md:col-span-2 md:aspect-video" : ""
+                  }`}
+                >
+                  <CldImage 
+                    src={["photo1_qxjxph", "photo2_kss2g6", "photo5_btlewz", "photo6_j6klvq"][index % 4]}
+                    alt={`Hajj Glimpse ${index + 1}`}
+                    fill
+                    className="object-cover grayscale opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <span className="text-white/80 text-xs font-mono bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-sm">View Full</span>
+                  </div>
                 </motion.div>
               ))}
             </div>

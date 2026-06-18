@@ -13,6 +13,7 @@ const navigation = [
   { name: "Hajj 2027", href: "/hajj-2027" },
   { name: "Ziyarat", href: "/ziyarat" },
   { name: "Kashmir", href: "/kashmir" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Blog", href: "/blog" },
 ];
 
