@@ -13,6 +13,9 @@ import { CldImage } from "next-cloudinary";
 const galleryItems = [
   { type: "image", src: "photo1_qxjxph", alt: "Beautiful Hajj Moment 1" },
   { type: "video", src: "hero_1_e3rred", title: "Customer Review - Amazing Experience" },
+  { type: "video", src: "video_hero3_pwy2hi", title: "Customer Review - Spiritual Journey" },
+  { type: "video", src: "video_hero_grmkyt", title: "Customer Review - Seamless Booking" },
+  { type: "video", src: "video_hero4_p8jrdt", title: "Customer Review - Highly Recommended" },
   { type: "image", src: "photo2_kss2g6", alt: "Beautiful Hajj Moment 2" },
   { type: "image", src: "photo3_y43yfd", alt: "Beautiful Hajj Moment 3" },
   { type: "image", src: "photo5_btlewz", alt: "Beautiful Hajj Moment 4" },

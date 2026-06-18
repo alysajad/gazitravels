@@ -8,9 +8,9 @@ import { CldImage } from "next-cloudinary";
 
 const videoReviews = [
   { id: "1", type: "video", src: "https://res.cloudinary.com/dnfakgkhz/video/upload/q_auto/f_auto/v1781798191/hero_1_e3rred.mp4" },
-  { id: "2", type: "placeholder", src: "samples/landscapes/nature-mountains" },
-  { id: "3", type: "placeholder", src: "samples/people/smiling-man" },
-  { id: "4", type: "placeholder", src: "samples/animals/reindeer" }
+  { id: "2", type: "video", src: "https://res.cloudinary.com/dnfakgkhz/video/upload/q_auto/f_auto/v1781801221/video_hero3_pwy2hi.mp4" },
+  { id: "3", type: "video", src: "https://res.cloudinary.com/dnfakgkhz/video/upload/q_auto/f_auto/v1781801221/video_hero_grmkyt.mp4" },
+  { id: "4", type: "video", src: "https://res.cloudinary.com/dnfakgkhz/video/upload/q_auto/f_auto/v1781801457/video_hero4_p8jrdt.mp4" }
 ];
 
 export function CustomerVoicesSection() {
