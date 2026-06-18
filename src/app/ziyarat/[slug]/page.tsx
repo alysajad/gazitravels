@@ -73,12 +73,47 @@ export default function ZiyaratPackageDetails({ params }: { params: { slug: stri
                     </span>
                   ))}
                 </div>
+
+                {pkg.tiers && (
+                  <>
+                    <h3 className="text-sm font-mono text-gray-500 uppercase tracking-wider mb-6">Select Your Tier</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+                      {pkg.tiers.map((tier, idx) => (
+                        <div 
+                          key={idx} 
+                          className={`relative rounded-[24px] p-6 flex flex-col items-center justify-center text-center transition-all duration-normal ${
+                            tier.popular 
+                              ? "bg-dark text-white shadow-floating sm:scale-105 z-10 border-0" 
+                              : "bg-gray-50 border border-gray-200 text-dark"
+                          }`}
+                        >
+                          {tier.popular && (
+                            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-dark text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                              Popular
+                            </span>
+                          )}
+                          <h4 className={`text-xs font-semibold mb-4 ${tier.popular ? "text-accent uppercase tracking-wider" : "text-gray-500 uppercase tracking-wider"}`}>
+                            {tier.name}
+                          </h4>
+                          <div className="flex flex-col gap-1 mb-6">
+                            <span className="font-display font-bold text-3xl">{formatPrice(tier.price)}</span>
+                            <span className={`text-xs ${tier.popular ? "text-gray-400" : "text-gray-500"}`}>/person</span>
+                          </div>
+                          <p className={`text-[10px] uppercase tracking-wider leading-relaxed ${tier.popular ? "text-gray-400" : "text-gray-400"}`}>
+                            (Prices subject to change) <br/> Please enquire
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
 
               <div className="w-full md:w-[400px]">
                 <div className="bg-dark text-white rounded-3xl p-8 sticky top-32">
                   <h3 className="text-xl font-display font-semibold mb-2">Package Price</h3>
                   <div className="flex items-baseline gap-2 mb-8">
+                    {pkg.tiers && <span className="text-sm text-gray-400 mr-1">From</span>}
                     <span className="text-4xl font-bold font-display">{formatPrice(pkg.price)}</span>
                     <span className="text-gray-400">/person</span>
                   </div>
