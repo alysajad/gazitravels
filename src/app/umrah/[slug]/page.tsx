@@ -113,7 +113,7 @@ export default function UmrahPackageDetails({ params }: { params: { slug: string
                   </div>
 
                   <CTAButton 
-                    href={`https://wa.me/917006604820?text=Assalamu%20Alaikum%2C%20I'm%20interested%20in%20the%20${pkg.title}%20Umrah%20Package.`}
+                    href={`https://wa.me/917006604820?text=${encodeURIComponent(`Assalamu Alaikum, I'm interested in the ${pkg.title} Umrah Package (${pkg.tier} Tier, ${pkg.duration}, Group Size: ${pkg.groupSize}).`)}`}
                     variant="accent" 
                     className="w-full justify-center text-lg py-4"
                   >
