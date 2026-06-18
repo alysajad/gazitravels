@@ -79,7 +79,7 @@ export function HotelSection() {
                   <span>{hotel.distanceFromHaram}</span>
                 </div>
 
-                {/* Amenities — show max 2 for cleaner look */}
+                {/* Amenities show max 2 for cleaner look */}
                 <div className="flex items-center gap-2 flex-wrap">
                   {hotel.amenities.slice(0, 2).map((amenity) => (
                     <span

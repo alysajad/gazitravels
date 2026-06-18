@@ -45,7 +45,7 @@ export default function ZiyaratPage() {
               <SectionHeading
                 badge="Ziyarat"
                 title="Sacred Ziyarat Journeys"
-                subtitle="Guided pilgrimages to the holy shrines of Iraq & Iran — for those who seek closeness to the Ahlul Bayt."
+                subtitle="Guided pilgrimages to the holy shrines of Iraq & Iran for those who seek closeness to the Ahlul Bayt."
               />
             </motion.div>
           </div>

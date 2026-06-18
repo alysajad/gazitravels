@@ -36,10 +36,10 @@ export const kashmirPackages: KashmirPackage[] = [
     "highlights": [
       "Shikara ride on Dal Lake",
       "Gulmarg meadow & gondola option",
-      "Pahalgam — Valley of Shepherds",
+      "Pahalgam Valley of Shepherds",
       "Mughal Gardens of Srinagar"
     ],
-    "overview": "Kashmir is a divine paradise on earth — undulating meadows, twisting rivers and majestic snow-capped peaks. This six-day journey covers the three classics every first-time traveller dreams of: the houseboats and gardens of Srinagar, the alpine meadow of Gulmarg, and the pine-wrapped Valley of Shepherds at Pahalgam. Enough time to soak it in, without stretching the trip too thin.",
+    "overview": "Kashmir is a divine paradise on earth undulating meadows, twisting rivers and majestic snow-capped peaks. This six-day journey covers the three classics every first-time traveller dreams of: the houseboats and gardens of Srinagar, the alpine meadow of Gulmarg, and the pine-wrapped Valley of Shepherds at Pahalgam. Enough time to soak it in, without stretching the trip too thin.",
     "itinerary": [
       {
         "day": 1,
@@ -59,12 +59,12 @@ export const kashmirPackages: KashmirPackage[] = [
       {
         "day": 4,
         "title": "Pahalgam Sightseeing",
-        "desc": "Explore Pahalgam at leisure — Chandanwari, Aru and Betaab valley (by local cab) or a relaxed riverside walk. Overnight in Pahalgam."
+        "desc": "Explore Pahalgam at leisure Chandanwari, Aru and Betaab valley (by local cab) or a relaxed riverside walk. Overnight in Pahalgam."
       },
       {
         "day": 5,
         "title": "Pahalgam – Srinagar",
-        "desc": "Return to Srinagar. Afternoon tour of the Mughal Gardens — Nishat, Shalimar and Chashme Shahi — and the Shankaracharya hill viewpoint. Overnight in Srinagar."
+        "desc": "Return to Srinagar. Afternoon tour of the Mughal Gardens Nishat, Shalimar and Chashme Shahi and the Shankaracharya hill viewpoint. Overnight in Srinagar."
       },
       {
         "day": 6,
@@ -89,7 +89,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Entry fees to gardens, monuments & parks",
       "Gondola cable car, pony rides, shikara & adventure-activity charges",
       "Travel insurance of any kind",
-      "Personal expenses — tips, laundry, telephone, medical",
+      "Personal expenses tips, laundry, telephone, medical",
       "Anything not mentioned under inclusions",
       "Costs arising from circumstances beyond our control (weather, landslides, road blocks)"
     ]
@@ -110,11 +110,11 @@ export const kashmirPackages: KashmirPackage[] = [
     "popular": true,
     "highlights": [
       "All four valleys in one trip",
-      "Sonamarg — Thajiwas Glacier",
+      "Sonamarg Thajiwas Glacier",
       "Gulmarg gondola & Pahalgam",
       "Houseboat stay on Dal Lake"
     ],
-    "overview": "The complete Kashmir — majestic snow-clad mountains and verdant valleys across all four headline destinations. From romantic boat rides on Dal Lake to the glacier meadows of Sonamarg, the ski slopes of Gulmarg and the shepherds' valley of Pahalgam, this is the itinerary for travellers who want to see it all in one unhurried week.",
+    "overview": "The complete Kashmir majestic snow-clad mountains and verdant valleys across all four headline destinations. From romantic boat rides on Dal Lake to the glacier meadows of Sonamarg, the ski slopes of Gulmarg and the shepherds' valley of Pahalgam, this is the itinerary for travellers who want to see it all in one unhurried week.",
     "itinerary": [
       {
         "day": 1,
@@ -134,7 +134,7 @@ export const kashmirPackages: KashmirPackage[] = [
       {
         "day": 4,
         "title": "Pahalgam – Srinagar",
-        "desc": "Return to Srinagar with stops at the Avantipura ruins and Mattan. Afternoon visit to the Mughal Gardens — Nishat & Shalimar. Overnight in Srinagar."
+        "desc": "Return to Srinagar with stops at the Avantipura ruins and Mattan. Afternoon visit to the Mughal Gardens Nishat & Shalimar. Overnight in Srinagar."
       },
       {
         "day": 5,
@@ -164,7 +164,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Entry fees to gardens, monuments & parks",
       "Gondola cable car, pony rides, shikara & adventure-activity charges",
       "Travel insurance of any kind",
-      "Personal expenses — tips, laundry, telephone, medical",
+      "Personal expenses tips, laundry, telephone, medical",
       "Anything not mentioned under inclusions",
       "Costs arising from circumstances beyond our control (weather, landslides, road blocks)"
     ]
@@ -188,7 +188,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Gulmarg gondola for two",
       "Sonamarg glacier excursion"
     ],
-    "overview": "Kashmir is the most romantic way to begin a new life together. This seven-day honeymoon pairs a deluxe houseboat on Dal Lake with the meadows of Gulmarg, the pine valleys of Pahalgam and the glaciers of Sonamarg — candlelit dinners, private transfers and unhurried moments crafted just for two.",
+    "overview": "Kashmir is the most romantic way to begin a new life together. This seven-day honeymoon pairs a deluxe houseboat on Dal Lake with the meadows of Gulmarg, the pine valleys of Pahalgam and the glaciers of Sonamarg candlelit dinners, private transfers and unhurried moments crafted just for two.",
     "itinerary": [
       {
         "day": 1,
@@ -198,7 +198,7 @@ export const kashmirPackages: KashmirPackage[] = [
       {
         "day": 2,
         "title": "Srinagar Sightseeing",
-        "desc": "Visit the Mughal Gardens — Nishat Bagh and Shalimar Bagh — and a traditional carpet-weaving atelier. Evening at leisure. Overnight on the houseboat."
+        "desc": "Visit the Mughal Gardens Nishat Bagh and Shalimar Bagh and a traditional carpet-weaving atelier. Evening at leisure. Overnight on the houseboat."
       },
       {
         "day": 3,
@@ -243,7 +243,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Entry fees to gardens, monuments & parks",
       "Gondola cable car, pony rides, shikara & adventure-activity charges",
       "Travel insurance of any kind",
-      "Personal expenses — tips, laundry, telephone, medical",
+      "Personal expenses tips, laundry, telephone, medical",
       "Anything not mentioned under inclusions",
       "Costs arising from circumstances beyond our control (weather, landslides, road blocks)"
     ]
@@ -267,7 +267,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Gulmarg gondola & Khilanmarg",
       "Sonamarg, the Valley of Gold"
     ],
-    "overview": "Nature's youthful, timeless beauty across Kashmir's most charismatic corners. This premium circuit goes beyond the classics — adding the celebrated Betaab Valley, Aru Valley and forest trails along the Sheshnag river to the gardens of Srinagar, the slopes of Gulmarg and the golden meadows of Sonamarg. Crafted for travellers who want depth, comfort and the very best views.",
+    "overview": "Nature's youthful, timeless beauty across Kashmir's most charismatic corners. This premium circuit goes beyond the classics adding the celebrated Betaab Valley, Aru Valley and forest trails along the Sheshnag river to the gardens of Srinagar, the slopes of Gulmarg and the golden meadows of Sonamarg. Crafted for travellers who want depth, comfort and the very best views.",
     "itinerary": [
       {
         "day": 1,
@@ -297,7 +297,7 @@ export const kashmirPackages: KashmirPackage[] = [
       {
         "day": 6,
         "title": "Sonamarg & Departure",
-        "desc": "Early excursion to Sonamarg, the Valley of Gold, through dramatic mountain terrain — before your departure transfer to the airport."
+        "desc": "Early excursion to Sonamarg, the Valley of Gold, through dramatic mountain terrain before your departure transfer to the airport."
       }
     ],
     "inclusions": [
@@ -317,7 +317,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Entry fees to gardens, monuments & parks",
       "Gondola cable car, pony rides, shikara & adventure-activity charges",
       "Travel insurance of any kind",
-      "Personal expenses — tips, laundry, telephone, medical",
+      "Personal expenses tips, laundry, telephone, medical",
       "Anything not mentioned under inclusions",
       "Costs arising from circumstances beyond our control (weather, landslides, road blocks)"
     ]
@@ -341,7 +341,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Deluxe houseboat stays",
       "Trout season Apr–Sep"
     ],
-    "overview": "Cast a line in the cold, clear streams of the Himalayas. The Kashmir valley — fed by the Jhelum, Dal and Nagin lakes and eight glacial valleys — is famous for its brown trout. This six-day angling expedition pairs the upper and lower Lidder valley at Pahalgam with the Sindh valley at Sonamarg, between gardens, houseboats and the calm of Dal Lake.",
+    "overview": "Cast a line in the cold, clear streams of the Himalayas. The Kashmir valley fed by the Jhelum, Dal and Nagin lakes and eight glacial valleys is famous for its brown trout. This six-day angling expedition pairs the upper and lower Lidder valley at Pahalgam with the Sindh valley at Sonamarg, between gardens, houseboats and the calm of Dal Lake.",
     "itinerary": [
       {
         "day": 1,
@@ -392,7 +392,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Entry fees to gardens, monuments & parks",
       "Gondola cable car, pony rides, shikara & adventure-activity charges",
       "Travel insurance of any kind",
-      "Personal expenses — tips, laundry, telephone, medical",
+      "Personal expenses tips, laundry, telephone, medical",
       "Anything not mentioned under inclusions",
       "Costs arising from circumstances beyond our control (weather, landslides, road blocks)",
       "Fishing tackle, bait & angling-beat permit fees"
@@ -417,7 +417,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Betaab Valley & Baisaran meadows",
       "Gulmarg gondola & horse riding"
     ],
-    "overview": "Kashmir — heaven on earth — is made for family holidays. This relaxed seven-day tour blends breathtaking scenery with activities for every age group: a Shikara ride on Dal Lake, a glacier trek at Sonamarg, the grasslands of Pahalgam and the gondola at Gulmarg, with plenty of free time, Kashmiri cuisine and handicraft shopping along the way.",
+    "overview": "Kashmir heaven on earth is made for family holidays. This relaxed seven-day tour blends breathtaking scenery with activities for every age group: a Shikara ride on Dal Lake, a glacier trek at Sonamarg, the grasslands of Pahalgam and the gondola at Gulmarg, with plenty of free time, Kashmiri cuisine and handicraft shopping along the way.",
     "itinerary": [
       {
         "day": 1,
@@ -472,7 +472,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Entry fees to gardens, monuments & parks",
       "Gondola cable car, pony rides, shikara & adventure-activity charges",
       "Travel insurance of any kind",
-      "Personal expenses — tips, laundry, telephone, medical",
+      "Personal expenses tips, laundry, telephone, medical",
       "Anything not mentioned under inclusions",
       "Costs arising from circumstances beyond our control (weather, landslides, road blocks)"
     ]
@@ -496,7 +496,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Mughal Gardens of Srinagar",
       "Gulmarg meadow & gondola"
     ],
-    "overview": "Short on days, big on Kashmir. This four-day getaway covers the two crowd-favourites — the lakes and gardens of Srinagar and the alpine meadow of Gulmarg — at an easy pace. Ideal for a long-weekend escape or a quick first taste of the valley.",
+    "overview": "Short on days, big on Kashmir. This four-day getaway covers the two crowd-favourites the lakes and gardens of Srinagar and the alpine meadow of Gulmarg at an easy pace. Ideal for a long-weekend escape or a quick first taste of the valley.",
     "itinerary": [
       {
         "day": 1,
@@ -506,7 +506,7 @@ export const kashmirPackages: KashmirPackage[] = [
       {
         "day": 2,
         "title": "Srinagar Sightseeing",
-        "desc": "The Mughal Gardens — Nishat, Shalimar and Chashme Shahi — the Shankaracharya viewpoint and the old-city markets. Overnight in Srinagar."
+        "desc": "The Mughal Gardens Nishat, Shalimar and Chashme Shahi the Shankaracharya viewpoint and the old-city markets. Overnight in Srinagar."
       },
       {
         "day": 3,
@@ -536,7 +536,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Entry fees to gardens, monuments & parks",
       "Gondola cable car, pony rides, shikara & adventure-activity charges",
       "Travel insurance of any kind",
-      "Personal expenses — tips, laundry, telephone, medical",
+      "Personal expenses tips, laundry, telephone, medical",
       "Anything not mentioned under inclusions",
       "Costs arising from circumstances beyond our control (weather, landslides, road blocks)"
     ]
@@ -575,7 +575,7 @@ export const kashmirPackages: KashmirPackage[] = [
       {
         "day": 3,
         "title": "Srinagar – Doodhpathri – Srinagar",
-        "desc": "Excursion to the pristine Doodhpathri (Valley of Milk) — a quiet, bowl-shaped meadow framed by pine forests. Return to Srinagar. Overnight in Srinagar."
+        "desc": "Excursion to the pristine Doodhpathri (Valley of Milk) a quiet, bowl-shaped meadow framed by pine forests. Return to Srinagar. Overnight in Srinagar."
       },
       {
         "day": 4,
@@ -620,7 +620,7 @@ export const kashmirPackages: KashmirPackage[] = [
       "Entry fees to gardens, monuments & parks",
       "Gondola cable car, pony rides, shikara & adventure-activity charges",
       "Travel insurance of any kind",
-      "Personal expenses — tips, laundry, telephone, medical",
+      "Personal expenses tips, laundry, telephone, medical",
       "Anything not mentioned under inclusions",
       "Costs arising from circumstances beyond our control (weather, landslides, road blocks)"
     ]

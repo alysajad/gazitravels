@@ -40,8 +40,14 @@ export function PackageCard({ package: pkg, type, className }: PackageCardProps)
       </div>
       
       <div className="flex flex-col gap-1 mb-4">
-        <span className="font-display font-bold text-3xl">{formatPrice(pkg.price)}</span>
-        <span className={cn("text-xs", isPopular ? "text-gray-400" : "text-gray-500")}>/person</span>
+        {type === "hajj" ? (
+          <span className="font-display font-bold text-3xl">Coming Soon</span>
+        ) : (
+          <>
+            <span className="font-display font-bold text-3xl">{formatPrice(pkg.price)}</span>
+            <span className={cn("text-xs", isPopular ? "text-gray-400" : "text-gray-500")}>/person</span>
+          </>
+        )}
       </div>
 
       <p className={cn("text-xs leading-relaxed mb-8", isPopular ? "text-gray-400" : "text-gray-500")}>

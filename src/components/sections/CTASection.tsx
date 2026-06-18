@@ -21,7 +21,7 @@ export function CTASection() {
           </h2>
 
           <p className="mt-6 text-body-lg text-white/60 max-w-2xl mx-auto">
-            Speak with our team today — we have served pilgrims since 1998.
+            Speak with our team today we have served pilgrims since 1998.
             Your journey begins with a conversation.
           </p>
 

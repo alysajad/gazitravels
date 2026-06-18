@@ -80,7 +80,7 @@ export const umrahPackages: UmrahPackage[] = [
     duration: "14 Days",
     nightsMakkah: 7,
     nightsMadinah: 6,
-    accommodation: "5-star single rooms — Pullman Zamzam + Mövenpick",
+    accommodation: "5-star single rooms Pullman Zamzam + Mövenpick",
     meals: "Full board",
     groupSize: "Up to 10 pax",
     highlights: [

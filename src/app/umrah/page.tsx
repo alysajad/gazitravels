@@ -46,7 +46,7 @@ export default function UmrahPage() {
               <SectionHeading
                 badge="Umrah"
                 title="Umrah Packages"
-                subtitle="Guided spiritual journeys to Makkah & Madinah — trusted by thousands since 1998."
+                subtitle="Guided spiritual journeys to Makkah & Madinah trusted by thousands since 1998."
               />
             </motion.div>
           </div>

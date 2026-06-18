@@ -17,11 +17,11 @@ export function HajjAnnouncementStrip() {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-flex items-center gap-1.5 rounded-button bg-white/10 px-3 py-1 text-label font-mono font-medium text-white/70 uppercase tracking-wider mb-6">
-            Hajj 2027 — Coming Soon
+            Hajj 2027 Coming Soon
           </span>
 
           <h2 className="font-display font-bold text-display-lg text-white text-balance">
-            Hajj 2027 Packages — Coming Soon
+            Hajj 2027 Packages Coming Soon
           </h2>
 
           <p className="mt-6 text-body-lg text-white/60 max-w-2xl mx-auto">

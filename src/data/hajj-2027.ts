@@ -17,7 +17,7 @@ export const hajj2027 = {
   reasons: [
     {
       title: "Priority Slot Allocation",
-      description: "Quota is limited — early registration ensures you're first in line when packages are announced.",
+      description: "Quota is limited early registration ensures you're first in line when packages are announced.",
     },
     {
       title: "Early Price Lock",
@@ -43,7 +43,7 @@ export const hajj2027 = {
       description: "Full Hajj package with hotel shifting between Mecca, Mina & Arafat. Includes visa, flights, accommodation & Qafila leaders.",
       highlights: [
         "Hajj Visa & Return Flights",
-        "Hotel Shifting — Mecca, Mina & Arafat",
+        "Hotel Shifting Mecca, Mina & Arafat",
         "Dedicated Kashmiri Qafila Leaders",
         "All Rituals Guidance & Transport"
       ],

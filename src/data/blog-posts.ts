@@ -62,7 +62,7 @@ export const blogPosts = [
   },
   {
     slug: "ziyarat-iraq-guide",
-    title: "A Spiritual Guide to Ziyarat in Iraq — Najaf, Karbala & Beyond",
+    title: "A Spiritual Guide to Ziyarat in Iraq Najaf, Karbala & Beyond",
     category: "Ziyarat Guides",
     date: "2024-01-10",
     readTime: "10 min read",
@@ -98,7 +98,7 @@ export const blogPosts = [
   },
   {
     slug: "kashmir-travel-tips",
-    title: "Best Time to Visit Kashmir — A Seasonal Travel Guide",
+    title: "Best Time to Visit Kashmir A Seasonal Travel Guide",
     category: "Kashmir Travel",
     date: "2024-01-05",
     readTime: "6 min read",
@@ -137,7 +137,7 @@ export const blogPosts = [
   },
   {
     slug: "hajj-2027-updates",
-    title: "Hajj 2027 — What We Know So Far",
+    title: "Hajj 2027 What We Know So Far",
     category: "Hajj 2027 Updates",
     date: "2024-01-01",
     readTime: "5 min read",
@@ -171,11 +171,11 @@ export const blogPosts = [
   },
   {
     slug: "ihram-guide",
-    title: "Understanding Ihram — Rules, Prayer, and Spiritual Meaning",
+    title: "Understanding Ihram Rules, Prayer, and Spiritual Meaning",
     category: "Umrah Tips",
     date: "2023-12-28",
     readTime: "7 min read",
-    excerpt: "A detailed guide to Ihram — the sacred state pilgrims enter before performing Umrah or Hajj.",
+    excerpt: "A detailed guide to Ihram the sacred state pilgrims enter before performing Umrah or Hajj.",
     image: "/images/pilgrimage/blog-ihram.jpg",
     content: `
       <h3>More Than Just Clothing</h3>
@@ -210,7 +210,7 @@ export const blogPosts = [
   },
   {
     slug: "mashhad-ziyarat-guide",
-    title: "Visiting Imam Reza's Shrine in Mashhad — A Complete Guide",
+    title: "Visiting Imam Reza's Shrine in Mashhad A Complete Guide",
     category: "Ziyarat Guides",
     date: "2023-12-20",
     readTime: "9 min read",

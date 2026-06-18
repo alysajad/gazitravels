@@ -75,12 +75,12 @@ export default function AboutPage() {
                     What began as a small operation in Magam, Budgam has grown into one of
                     Kashmir&apos;s most trusted pilgrimage and travel companies. Over two decades,
                     we have guided more than 25,000 pilgrims through the most important
-                    journeys of their lives — from the holy cities of Makkah and Madinah to
+                    journeys of their lives from the holy cities of Makkah and Madinah to
                     the sacred shrines of Iraq and Iran.
                   </p>
                   <p>
                     Our strength lies in our personal approach. Every pilgrim who travels with
-                    us is not just a booking number — they are a guest entrusted to our care.
+                    us is not just a booking number they are a guest entrusted to our care.
                     From visa processing to on-ground guidance, we handle every detail with the
                     same care we would want for our own families.
                   </p>

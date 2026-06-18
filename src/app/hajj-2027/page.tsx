@@ -35,7 +35,7 @@ export default function Hajj2027Page() {
               </span>
 
               <h1 className="font-display font-bold text-display-xl text-white text-balance">
-                Hajj 2027 Packages — Coming Soon
+                Hajj 2027 Packages Coming Soon
               </h1>
 
               <p className="mt-8 text-body-lg text-white/60 max-w-2xl">
@@ -258,7 +258,7 @@ export default function Hajj2027Page() {
                     </p>
                     <footer className="mt-4">
                       <p className="font-body font-medium text-body text-dark">
-                        — {hajj2027.quote.author}
+                        {hajj2027.quote.author}
                       </p>
                       <p className="text-body text-gray-500">
                         {hajj2027.quote.role}

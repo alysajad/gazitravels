@@ -27,7 +27,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://gazitourstravels.com"),
   title: {
-    default: "Gazi Tour & Travels — Trusted Pilgrimage & Travel Since 1998",
+    default: "Gazi Tour & Travels Trusted Pilgrimage & Travel Since 1998",
     template: "%s | Gazi Tour & Travels",
   },
   description: "Guiding pilgrims on Umrah, Ziyarat (Iraq & Iran), Hajj 2027 pre-registration, and Kashmir tours since 1998. 25,000+ pilgrims served. Book your spiritual journey today.",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://gazitourstravels.com",
     siteName: "Gazi Tour & Travels",
-    title: "Gazi Tour & Travels — Trusted Pilgrimage & Travel Since 1998",
+    title: "Gazi Tour & Travels Trusted Pilgrimage & Travel Since 1998",
     description: "Guiding pilgrims on Umrah, Ziyarat, Hajj 2027, and Kashmir tours since 1998.",
     images: [
       {

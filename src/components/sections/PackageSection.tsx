@@ -11,12 +11,12 @@ export function UmrahPackagesSection() {
   const hajjPackages = [
     {
       title: "Hajj Shifting Package",
-      price: "₹6,50,000",
+      price: "Coming Soon",
       description: "Full Hajj package with hotel shifting between Mecca, Mina & Arafat. Includes visa, flights, accommodation & Qafila leaders.",
       isPopular: true,
       features: [
         "Hajj Visa & Return Flights",
-        "Hotel Shifting — Mecca, Mina & Arafat",
+        "Hotel Shifting Mecca, Mina & Arafat",
         "Dedicated Kashmiri Qafila Leaders",
         "All Rituals Guidance & Transport"
       ],
@@ -27,7 +27,7 @@ export function UmrahPackagesSection() {
     {
       title: "Essential (Umrah Only)",
       price: "₹1,10,000",
-      description: "Core Umrah — Mecca & Madinah with guided Ziyarat",
+      description: "Core Umrah Mecca & Madinah with guided Ziyarat",
       isPopular: false,
       features: [
         "Standard Hotels",
@@ -120,7 +120,9 @@ export function UmrahPackagesSection() {
               
               <div className="flex flex-col gap-1 mb-4">
                 <span className="font-display font-bold text-3xl">{pkg.price}</span>
-                <span className={`text-xs ${pkg.isPopular ? "text-gray-400" : "text-gray-500"}`}>/person</span>
+                {activeTab !== "hajj" && (
+                  <span className={`text-xs ${pkg.isPopular ? "text-gray-400" : "text-gray-500"}`}>/person</span>
+                )}
               </div>
 
               <p className={`text-xs leading-relaxed mb-8 ${pkg.isPopular ? "text-gray-400" : "text-gray-500"}`}>

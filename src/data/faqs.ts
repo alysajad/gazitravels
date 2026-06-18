@@ -7,7 +7,7 @@ export interface FAQ {
 export const faqs: FAQ[] = [
   {
     question: "What does your Umrah package include?",
-    answer: "All our Umrah packages include Umrah visa processing, return flights, airport transfers, AC transportation, guided Ziyarat in Makkah and Madinah, and accommodation near the Haram. Specific inclusions vary by package tier — Economy includes breakfast only, while Premium includes full board dining.",
+    answer: "All our Umrah packages include Umrah visa processing, return flights, airport transfers, AC transportation, guided Ziyarat in Makkah and Madinah, and accommodation near the Haram. Specific inclusions vary by package tier Economy includes breakfast only, while Premium includes full board dining.",
     category: "Umrah",
   },
   {

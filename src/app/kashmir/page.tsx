@@ -51,7 +51,7 @@ export default function KashmirPage() {
               </span>
 
               <h1 className="font-display font-bold text-[clamp(32px,5vw,72px)] leading-tight text-white text-balance">
-                Explore the Paradise on Earth — Kashmir
+                Explore the Paradise on Earth Kashmir
               </h1>
 
               <p className="mt-4 sm:mt-8 text-sm sm:text-body-lg text-white/80 max-w-2xl">
