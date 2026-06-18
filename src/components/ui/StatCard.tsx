@@ -45,7 +45,7 @@ export function StatCard({ number, suffix = "", label, className }: StatCardProp
         className
       )}
     >
-      <div className="font-display font-bold text-5xl text-dark">
+      <div className="font-display font-bold text-4xl md:text-5xl text-dark">
         {isNumeric ? count.toLocaleString("en-IN") : number}
         {suffix}
       </div>

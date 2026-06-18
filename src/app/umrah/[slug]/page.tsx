@@ -96,9 +96,9 @@ export default function UmrahPackageDetails({ params }: { params: { slug: string
               <div className="w-full md:w-[400px]">
                 <div className="bg-dark text-white rounded-3xl p-8 sticky top-32">
                   <h3 className="text-xl font-display font-semibold mb-2">Package Price</h3>
-                  <div className="flex items-baseline gap-2 mb-8">
-                    <span className="text-4xl font-bold font-display">{formatPrice(pkg.price)}</span>
-                    <span className="text-gray-400">/person</span>
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-8">
+                    <span className="text-3xl lg:text-4xl font-bold font-display break-words">{formatPrice(pkg.price)}</span>
+                    <span className="text-sm text-gray-400">/person</span>
                   </div>
 
                   <div className="space-y-4 mb-8">

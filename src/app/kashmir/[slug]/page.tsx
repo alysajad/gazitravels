@@ -125,8 +125,8 @@ export default function PackageDetailsPage({
                       ₹{pkg.originalPrice.toLocaleString("en-IN")}
                     </span>
                   </div>
-                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className="text-5xl font-display font-bold text-orange-500">
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-8">
+                    <span className="text-3xl lg:text-5xl font-display font-bold text-orange-500 break-words">
                       ₹{pkg.price.toLocaleString("en-IN")}
                     </span>
                     <span className="text-gray-500 font-medium">/ person</span>
