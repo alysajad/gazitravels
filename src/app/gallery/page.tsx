@@ -22,6 +22,12 @@ const galleryItems = [
   { type: "image", src: "photo6_j6klvq", alt: "Beautiful Hajj Moment 5" },
   { type: "image", src: "photo7_ohnsqp", alt: "Beautiful Hajj Moment 6" },
   { type: "image", src: "photo3.jpg_ot0bn8", alt: "Beautiful Hajj Moment 7" },
+  { type: "image", src: "photo8_pfkig2", alt: "Beautiful Hajj Moment 8" },
+  { type: "image", src: "photo9_dihjwc", alt: "Beautiful Hajj Moment 9" },
+  { type: "image", src: "photo12_j4ivog", alt: "Beautiful Hajj Moment 10" },
+  { type: "image", src: "photo13_zz7bsx", alt: "Beautiful Hajj Moment 11" },
+  { type: "image", src: "photo10_a9imor", alt: "Beautiful Hajj Moment 12" },
+  { type: "image", src: "photo_11_whjc8v", alt: "Beautiful Hajj Moment 13" },
 ];
 
 export default function GalleryPage() {
