@@ -154,7 +154,7 @@ export default function ZiyaratPackageDetails({ params }: { params: { slug: stri
                   </div>
 
                   <CTAButton 
-                    href={`https://wa.me/917006604820?text=${encodeURIComponent(`Assalamu Alaikum, I'm interested in the ${pkg.title} Ziyarat Package${selectedTier ? ` (${selectedTier} Tier)` : ''}.`)}`}
+                    href={`/contact?journey=${encodeURIComponent(`Ziyarat - ${pkg.title}${selectedTier ? ` (${selectedTier} Tier)` : ''}`)}&duration=${encodeURIComponent(pkg.duration)}`}
                     variant="accent" 
                     className="w-full justify-center text-lg py-4"
                   >

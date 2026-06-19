@@ -142,7 +142,7 @@ export default function PackageDetailsPage({
                   </div>
 
                   <CTAButton 
-                    href={`https://wa.me/917006604820?text=${encodeURIComponent(`Assalamu Alaikum, I'm interested in the ${pkg.title} Kashmir Tour Package (${pkg.tier}, ${pkg.season} Season, ${pkg.duration}).`)}`}
+                    href={`/contact?journey=${encodeURIComponent(`Kashmir Tour - ${pkg.title} (${pkg.tier}, ${pkg.season})`)}&duration=${encodeURIComponent(pkg.duration)}`}
                     className="w-full justify-center bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30 text-lg py-4"
                   >
                     Book Now
