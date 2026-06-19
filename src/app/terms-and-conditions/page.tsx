@@ -11,7 +11,7 @@ export default function TermsAndConditionsPage() {
           <SectionHeading
             title="Terms & Conditions"
             subtitle="Booking & Cancellation"
-            alignment="left"
+            align="left"
           />
           
           <div className="mt-12 space-y-12 text-body text-gray-600 leading-relaxed">
