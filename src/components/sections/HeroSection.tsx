@@ -42,9 +42,9 @@ export function HeroSection() {
           </div>
           <div className="flex items-center gap-1 ml-1 text-[#00B67A]">
             <Star className="w-3.5 h-3.5 fill-current" />
-            <span className="text-xs font-semibold">Trustpilot</span>
+            <span className="text-xs font-semibold">Gazi Travels</span>
           </div>
-          <span className="text-xs text-gray-700 font-medium ml-1">Trusted by 40k+ clients</span>
+          <span className="text-xs text-gray-700 font-medium ml-1">Trusted by 25k+ clients</span>
         </motion.div>
 
         {/* Heading */}

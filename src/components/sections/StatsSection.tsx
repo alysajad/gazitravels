@@ -19,12 +19,12 @@ export function StatsSection() {
             className="lg:w-1/3 flex flex-col justify-center"
           >
             <p className="text-body text-gray-500 mb-12 max-w-sm">
-              With over <span className="font-bold text-dark">15 years of experience</span> in organizing Hajj and Umrah pilgrimages, we have helped thousands of pilgrims fulfill their spiritual obligations with comfort.
+              With over <span className="font-bold text-dark">25 years of experience</span> in organizing Hajj and Umrah pilgrimages, we have helped thousands of pilgrims fulfill their spiritual obligations with comfort.
             </p>
             
             <div>
               <h3 className="font-display font-bold text-[80px] leading-none text-dark tracking-tighter">
-                540+
+                25k+
               </h3>
               <p className="text-sm font-semibold text-gray-500 mt-2 uppercase tracking-wide">
                 Successfully <span className="text-dark">Happy Pilgrims</span>
@@ -67,7 +67,7 @@ export function StatsSection() {
                 </div>
                 <h4 className="font-display font-semibold text-xl text-dark mb-3">Excellence</h4>
                 <p className="text-xs text-gray-500 leading-relaxed mb-6">
-                  With over 15 years of experience in organizing Hajj and Umrah pilgrimages, we have helped.
+                  With over 25 years of experience in organizing Hajj and Umrah pilgrimages, we have helped.
                 </p>
                 <Link
                   href="/contact"
@@ -125,7 +125,7 @@ export function StatsSection() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-2xl text-dark mb-1">15+ Years</h4>
+                    <h4 className="font-display font-bold text-2xl text-dark mb-1">25+ Years</h4>
                     <p className="text-[10px] font-medium text-gray-500 uppercase">Experience In Hajj Services</p>
                   </div>
                 </div>

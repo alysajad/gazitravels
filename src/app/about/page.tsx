@@ -20,8 +20,8 @@ const milestones = [
 ];
 
 const credentials = [
-  { title: "Ministry of Hajj", description: "Registered Hajj operator" },
-  { title: "J&K Tourism", description: "Licensed tour operator" },
+  { title: "Ministry of Hajj", description: "Registered Hajj operator", icon: "/images/pilgrimage/logo_comitee.png", logoClass: "w-16 h-16 sm:w-20 sm:h-20" },
+  { title: "J&K Tourism", description: "Licensed tour operator", icon: "/images/pilgrimage/toursim.png", logoClass: "w-10 h-10 sm:w-12 sm:h-12" },
   { title: "Since 1998", description: "25+ years of experience" },
   { title: "25,000+", description: "Pilgrims guided" },
 ];
@@ -112,7 +112,7 @@ export default function AboutPage() {
               className="mb-12"
             />
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
               {credentials.map((cred, index) => (
                 <motion.div
                   key={cred.title}
@@ -120,12 +120,20 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-surface rounded-card shadow-card p-6 text-center"
+                  className="bg-surface rounded-card shadow-card p-5 sm:p-6 lg:p-8 flex items-center justify-center text-center h-full gap-4 lg:gap-6"
                 >
-                  <div className="font-display font-bold text-heading-lg text-dark">
-                    {cred.title}
+                  {cred.icon && (
+                    <div className={`flex-shrink-0 relative ${cred.logoClass || 'w-12 h-12'}`}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={cred.icon} alt={cred.title} className="w-full h-full object-contain" />
+                    </div>
+                  )}
+                  <div>
+                    <div className="font-display font-bold text-lg sm:text-xl lg:text-heading-lg text-dark leading-tight whitespace-nowrap">
+                      {cred.title}
+                    </div>
+                    <p className="mt-1 lg:mt-2 text-sm sm:text-base lg:text-body text-gray-500 leading-snug">{cred.description}</p>
                   </div>
-                  <p className="mt-2 text-body text-gray-500">{cred.description}</p>
                 </motion.div>
               ))}
             </div>
