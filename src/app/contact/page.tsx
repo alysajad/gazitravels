@@ -72,12 +72,35 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
-      router.push("/thank-you");
-    }, 500);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      // Serialize form data to URL parameters
+      const params = new URLSearchParams();
+      Object.entries(formData).forEach(([key, value]) => {
+        if (value) params.append(key, value);
+      });
+
+      router.push(`/thank-you?${params.toString()}`);
+    } catch (error) {
+      console.error(error);
+      alert('There was an error sending your message. Please try again or contact us directly.');
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -208,11 +231,13 @@ function ContactForm() {
         />
       </div>
 
-      <button type="submit" className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-medium text-dark hover:bg-accent-hover transition-colors duration-fast w-full">
-        Send Message
-        <div className="w-8 h-8 rounded-full bg-dark flex items-center justify-center text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform group-hover:scale-110"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-        </div>
+      <button type="submit" disabled={isSubmitting} className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-medium text-dark hover:bg-accent-hover transition-colors duration-fast w-full disabled:opacity-70 disabled:cursor-not-allowed">
+        {isSubmitting ? "Sending..." : "Send Message"}
+        {!isSubmitting && (
+          <div className="w-8 h-8 rounded-full bg-dark flex items-center justify-center text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform group-hover:scale-110"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </div>
+        )}
       </button>
     </form>
   );
