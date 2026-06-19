@@ -41,6 +41,8 @@ export function CTASection() {
             <span>7006604820</span>
             <span className="hidden sm:inline">|</span>
             <span>gazitravels@gmail.com</span>
+            <span className="hidden sm:inline">|</span>
+            <span>info@gazitourandtravels.com</span>
           </div>
         </motion.div>
       </div>

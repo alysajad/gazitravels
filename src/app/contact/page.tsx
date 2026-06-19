@@ -9,6 +9,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { umrahPackages } from "@/data/umrah-packages";
+import { ziyaratPackages } from "@/data/ziyarat-packages";
+import { kashmirPackages } from "@/data/kashmir-packages";
 
 const contactInfo: Array<{
   icon: React.ReactNode;
@@ -27,6 +30,7 @@ const contactInfo: Array<{
     icon: <Mail className="w-5 h-5" />,
     title: "Email",
     details: [
+      { label: "Primary", value: "info@gazitourandtravels.com", href: "mailto:info@gazitourandtravels.com" },
       { label: "General", value: "gazitravels@gmail.com", href: "mailto:gazitravels@gmail.com" },
     ],
   },
@@ -49,6 +53,7 @@ function ContactForm() {
     phone: "",
     email: "",
     journeyType: "",
+    packageName: "",
     duration: "",
     date: "",
     travelers: "",
@@ -56,12 +61,42 @@ function ContactForm() {
   });
 
   useEffect(() => {
+    const journeyParam = searchParams.get("journey") || "";
+    let initialCategory = "";
+    let initialPackage = "";
+
+    if (journeyParam) {
+      if (journeyParam.startsWith("Umrah")) {
+        initialCategory = "Umrah";
+        const matched = umrahPackages.find(p => journeyParam.includes(p.title));
+        if (matched) initialPackage = matched.title;
+      } else if (journeyParam.startsWith("Ziyarat")) {
+        initialCategory = "Ziyarat";
+        const matched = ziyaratPackages.find(p => journeyParam.includes(p.title));
+        if (matched) initialPackage = matched.title;
+      } else if (journeyParam.startsWith("Kashmir")) {
+        initialCategory = "Kashmir";
+        const matched = kashmirPackages.find(p => journeyParam.includes(p.title));
+        if (matched) initialPackage = matched.title;
+      } else if (journeyParam.includes("Hajj")) {
+        initialCategory = "Hajj 2027";
+      }
+    }
+
+    let messageText = "";
+    if (initialPackage && journeyParam !== initialCategory && journeyParam !== initialPackage) {
+        // Automatically append the tier / extra details to the message
+        messageText = `I am interested in: ${journeyParam}`;
+    }
+
     setFormData(prev => ({
       ...prev,
-      journeyType: searchParams.get("journey") || "",
+      journeyType: initialCategory,
+      packageName: initialPackage,
       duration: searchParams.get("duration") || "",
       date: searchParams.get("date") || "",
       travelers: searchParams.get("travelers") || "",
+      message: messageText
     }));
   }, [searchParams]);
 
@@ -153,26 +188,54 @@ function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
-            Journey Type
+            Journey Category
           </label>
           <select 
             name="journeyType"
             value={formData.journeyType}
-            onChange={handleChange}
+            onChange={(e) => {
+              handleChange(e);
+              setFormData(prev => ({ ...prev, packageName: "" }));
+            }}
             className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all duration-fast"
           >
-            <option value="">Select journey type</option>
+            <option value="">Select category</option>
+            <option value="Umrah">Umrah Package</option>
             <option value="Hajj 2027">Hajj 2027</option>
-            <option value="Umrah Package">Umrah Package</option>
-            <option value="Iraq/Iran Ziyarat">Iraq/Iran Ziyarat</option>
-            <option value="Kashmir Tour">Kashmir Tour</option>
-            <option value="umrah">Other Umrah</option>
-            <option value="ziyarat">Other Ziyarat</option>
-            <option value="hajj">Other Hajj</option>
-            <option value="kashmir">Other Kashmir</option>
-            <option value="other">Other</option>
+            <option value="Ziyarat">Ziyarat Tour</option>
+            <option value="Kashmir">Kashmir Tour</option>
           </select>
         </div>
+        
+        {formData.journeyType && formData.journeyType !== "Hajj 2027" ? (
+          <div>
+            <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
+              Package Options
+            </label>
+            <select
+              name="packageName"
+              value={formData.packageName}
+              onChange={handleChange}
+              className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all duration-fast"
+            >
+              <option value="">Select package</option>
+              {formData.journeyType === "Umrah" && umrahPackages.map(p => (
+                <option key={p.slug} value={p.title}>{p.title}</option>
+              ))}
+              {formData.journeyType === "Ziyarat" && ziyaratPackages.map(p => (
+                <option key={p.slug} value={p.title}>{p.title}</option>
+              ))}
+              {formData.journeyType === "Kashmir" && kashmirPackages.map(p => (
+                <option key={p.slug} value={p.title}>{p.title}</option>
+              ))}
+            </select>
+          </div>
+        ) : (
+          <div className="hidden md:block"></div>
+        )}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
             Duration
@@ -186,22 +249,22 @@ function ContactForm() {
             placeholder="e.g. 14 Days"
           />
         </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
             Preferred Date
           </label>
           <input
-            type="text"
+            type="date"
             name="date"
+            min={new Date().toISOString().split('T')[0]}
             value={formData.date}
             onChange={handleChange}
             className="w-full rounded-lg border border-gray-300 bg-surface px-4 py-3 text-body text-dark placeholder-gray-500 transition-all duration-fast focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-            placeholder="e.g. Upcoming Month"
           />
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block mb-2 text-label font-mono font-medium text-gray-500 uppercase tracking-wider">
             Travelers

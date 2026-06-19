@@ -32,7 +32,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "How do I contact you for a custom quote?",
-    answer: "You can reach us via WhatsApp at 7006604820, call our office at 7006347712, or email us at gazitravels@gmail.com. We respond to all inquiries within 24 hours and are happy to create a customised package for your needs.",
+    answer: "You can reach us via WhatsApp at 7006604820, call our office at 7006347712, or email us at info@gazitourandtravels.com or gazitravels@gmail.com. We respond to all inquiries within 24 hours and are happy to create a customised package for your needs.",
     category: "General",
   },
 ];
