@@ -27,7 +27,8 @@ export default function KashmirPage() {
       ? kashmirPackages
       : kashmirPackages.filter(
           (pkg) => pkg.season.toLowerCase() === activeSeason.toLowerCase() || 
-                   pkg.tier.toLowerCase() === activeSeason.toLowerCase()
+                   pkg.tier.toLowerCase() === activeSeason.toLowerCase() ||
+                   pkg.themes?.some(t => t.toLowerCase() === activeSeason.toLowerCase())
         );
 
   return (

@@ -4,6 +4,7 @@ export interface KashmirPackage {
   title: string;
   tier: string;
   season: string;
+  themes?: string[];
   price: number;
   originalPrice: number;
   save: string;
@@ -26,6 +27,7 @@ export const kashmirPackages: KashmirPackage[] = [
     "title": "Kashmir Paradise Tour",
     "tier": "Budget",
     "season": "Summer",
+    "themes": ["Family", "Summer"],
     "price": 16900,
     "originalPrice": 20000,
     "save": "3,100",
@@ -100,6 +102,7 @@ export const kashmirPackages: KashmirPackage[] = [
     "title": "Best of Kashmir Tour",
     "tier": "Premium",
     "season": "Summer",
+    "themes": ["Family", "Summer"],
     "price": 20900,
     "originalPrice": 25000,
     "save": "4,100",
@@ -175,6 +178,7 @@ export const kashmirPackages: KashmirPackage[] = [
     "title": "Kashmir Honeymoon Tour",
     "tier": "Luxury",
     "season": "Summer",
+    "themes": ["Honeymoon", "Summer", "Winter"],
     "price": 27900,
     "originalPrice": 30000,
     "save": "2,100",
@@ -254,6 +258,7 @@ export const kashmirPackages: KashmirPackage[] = [
     "title": "Charismatic Kashmir Tour",
     "tier": "Ultra-Luxury",
     "season": "Summer",
+    "themes": ["Honeymoon", "Summer"],
     "price": 29900,
     "originalPrice": 35000,
     "save": "5,100",
@@ -328,6 +333,7 @@ export const kashmirPackages: KashmirPackage[] = [
     "title": "Kashmir Angling Tour",
     "tier": "Premium",
     "season": "Summer",
+    "themes": ["Adventure", "Summer"],
     "price": 20900,
     "originalPrice": 25000,
     "save": "4,100",
@@ -403,7 +409,8 @@ export const kashmirPackages: KashmirPackage[] = [
     "slug": "kashmir-family-tour",
     "title": "Kashmir Family Tour",
     "tier": "Luxury",
-    "season": "Summer",
+    "season": "Winter",
+    "themes": ["Family", "Winter", "Adventure"],
     "price": 35900,
     "originalPrice": 40000,
     "save": "4,100",
@@ -483,6 +490,7 @@ export const kashmirPackages: KashmirPackage[] = [
     "title": "Srinagar Gulmarg Getaway",
     "tier": "Budget",
     "season": "Summer",
+    "themes": ["Family", "Summer"],
     "price": 11900,
     "originalPrice": 14000,
     "save": "2,100",
@@ -547,6 +555,7 @@ export const kashmirPackages: KashmirPackage[] = [
     "title": "Grand Kashmir Tour",
     "tier": "Ultra-Luxury",
     "season": "Summer",
+    "themes": ["Adventure", "Family", "Summer"],
     "price": 34900,
     "originalPrice": 40000,
     "save": "5,100",
