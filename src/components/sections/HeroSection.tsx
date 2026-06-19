@@ -21,7 +21,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-white" />
       </div>
 
-      <div className="relative z-10 w-full max-w-content mx-auto px-6 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full flex-1 max-w-content mx-auto px-6 flex flex-col items-center text-center">
         {/* Trustpilot Badge */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -86,7 +86,7 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.95, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="relative mt-12 w-full max-w-5xl h-[500px] md:h-[600px] flex items-end justify-center"
+          className="relative mt-8 md:mt-12 w-full max-w-5xl flex-1 min-h-[250px] sm:min-h-[300px] md:min-h-[500px] flex items-end justify-center"
         >
           <Image
             src="/images/pilgrimage/kaaba.png"
