@@ -92,10 +92,10 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative"
+                className="relative group"
               >
                 <div className="aspect-[4/5] rounded-card overflow-hidden">
-                  <div className="w-full h-full bg-[url('/images/pilgrimage/story-image.jpg')] bg-cover bg-center grayscale" />
+                  <div className="w-full h-full bg-[url('/images/pilgrimage/story-image.jpg')] bg-cover bg-center grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" />
                 </div>
               </motion.div>
             </div>
