@@ -10,6 +10,42 @@ export interface Hotel {
 
 export const hotels: Hotel[] = [
   {
+    name: "Manarat Misk Hotel",
+    city: "Makkah",
+    stars: 3,
+    distanceFromHaram: "700m from Masjid al-Haram",
+    amenities: ["Air-conditioning", "WiFi", "24hr reception", "Budget friendly"],
+    image: "/images/hotels/manarat-misk.png",
+    description: "Manarat Al Misk Hotel provides a budget-friendly and comfortable stay in Makkah. Located in the Ajyad District, it is conveniently situated approximately 700-1100 meters from the Masjid Al-Haram. It offers essential amenities such as air-conditioned rooms and free Wi-Fi, making it a suitable choice for pilgrims seeking value without compromising on comfort during their spiritual journey.",
+  },
+  {
+    name: "Dream Zone Hotel",
+    city: "Makkah",
+    stars: 3,
+    distanceFromHaram: "400m from Masjid al-Haram",
+    amenities: ["WiFi", "24hr reception", "Room service", "Restaurant"],
+    image: "/images/hotels/dream-zone.png",
+    description: "Dream Zone Hotel is a popular accommodation choice for Hajj and Umrah pilgrims. Conveniently located approximately 400 to 700 meters from the Masjid al-Haram, it offers easy access to the holy mosque. The hotel provides comfortable rooms and reliable services, making it a frequent choice in various Umrah and Hajj packages.",
+  },
+  {
+    name: "Marjan International",
+    city: "Madinah",
+    stars: 3,
+    distanceFromHaram: "200m from Masjid Nabawi",
+    amenities: ["Free WiFi", "24hr front desk", "Family rooms", "Restaurant"],
+    image: "/images/hotels/marjan-intl.png",
+    description: "Marjan International Hotel, also known as Hotel Al Merjan International Tower, is situated in the Central Madinah district (Markaziah). It is within a very short walking distance (approx. 170-300 meters) from the Prophet's Mosque, offering pilgrims exceptional convenience. The hotel features comfortable family rooms, an on-site restaurant, and a welcoming atmosphere.",
+  },
+  {
+    name: "Marjan Golden",
+    city: "Madinah",
+    stars: 3,
+    distanceFromHaram: "300m from Masjid Nabawi",
+    amenities: ["Free WiFi", "Air-conditioned", "24hr reception", "On-site dining"],
+    image: "/images/hotels/marjan-golden.png",
+    description: "Marjan Golden Hotel is located in the central area of Madinah, offering close proximity to the Prophet's Mosque. Known for its strategic location, it allows pilgrims easy access for their daily prayers. The hotel provides essential amenities including free high-speed Wi-Fi, air-conditioned rooms, and a 24-hour front desk, ensuring a restful stay during your spiritual journey.",
+  },
+  {
     name: "Pullman Zamzam Makkah",
     city: "Makkah",
     stars: 5,
