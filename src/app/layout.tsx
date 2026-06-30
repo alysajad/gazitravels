@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     default: "GAZI TOURS AND TRAVELS",
     template: "%s | GAZI TOURS AND TRAVELS",
   },
-  description: "Guiding pilgrims on Umrah, Ziyarat (Iraq & Iran), Hajj 2027 pre-registration, and Kashmir tours since 1998. 25,000+ pilgrims served. Book your spiritual journey today.",
+  description: "Guiding pilgrims on Umrah, Ziyarat (Iraq & Iran), Hajj 2027 pre-registration, and Kashmir tours since 2004. 25,000+ pilgrims served. Book your spiritual journey today.",
   keywords: ["Umrah", "Ziyarat", "Hajj 2027", "Kashmir tours", "pilgrimage", "travel agency", "Kashmir", "Iraq Ziyarat", "Iran Ziyarat", "Makkah", "Madinah"],
   authors: [{ name: "GAZI TOURS AND TRAVELS" }],
   creator: "GAZI TOURS AND TRAVELS",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: "https://gazitourstravels.com",
     siteName: "GAZI TOURS AND TRAVELS",
     title: "GAZI TOURS AND TRAVELS",
-    description: "Guiding pilgrims on Umrah, Ziyarat, Hajj 2027, and Kashmir tours since 1998.",
+    description: "Guiding pilgrims on Umrah, Ziyarat, Hajj 2027, and Kashmir tours since 2004.",
     images: [
       {
         url: "/og-image.jpg",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "GAZI TOURS AND TRAVELS",
-    description: "Trusted pilgrimage & travel since 1998",
+    description: "Trusted pilgrimage & travel since 2004",
     images: ["/og-image.jpg"],
   },
   verification: {

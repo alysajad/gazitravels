@@ -10,7 +10,7 @@ import { TeamSection } from "@/components/sections/TeamSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 const milestones = [
-  { year: "1998", event: "Gazi Tour & Travels founded by Haji Zakir Mohammad Abbas in Magam, Budgam" },
+  { year: "2004", event: "Gazi Tour & Travels founded by Haji Zakir Mohammad Abbas in Magam, Budgam" },
   { year: "2005", event: "Expanded services to include Iraq & Iran Ziyarat packages" },
   { year: "2010", event: "Crossed 10,000 pilgrims guided milestone" },
   { year: "2015", event: "Launched Kashmir tourism vertical" },
@@ -22,7 +22,7 @@ const milestones = [
 const credentials = [
   { title: "Ministry of Hajj", description: "Registered Hajj operator", icon: "/images/pilgrimage/logo_comitee.png", logoClass: "w-16 h-16 sm:w-20 sm:h-20" },
   { title: "J&K Tourism", description: "Licensed tour operator", icon: "/images/pilgrimage/toursim.png", logoClass: "w-10 h-10 sm:w-12 sm:h-12" },
-  { title: "Since 1998", description: "25+ years of experience" },
+  { title: "Since 2004", description: "25+ years of experience" },
   { title: "25,000+", description: "Pilgrims guided" },
 ];
 
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
                 <div className="mt-8 space-y-4 text-body text-gray-500">
                     <p>
-                    In 1998, Haji Zakir Mohammad Abbas founded Gazi Tour &amp; Travels with
+                    In 2004, Haji Zakir Mohammad Abbas founded Gazi Tour &amp; Travels with
                     a simple vision: to make the sacred journey of Umrah and Ziyarat
                     accessible, trustworthy, and deeply personal for every pilgrim from Kashmir.
                   </p>

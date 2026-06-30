@@ -29,7 +29,7 @@ export const hajj2027 = {
     },
   ],
   quote: {
-    text: "We have guided pilgrims through Hajj since 1998. When Hajj 2027 packages are confirmed, our registered pilgrims get first access.",
+    text: "We have guided pilgrims through Hajj since 2004. When Hajj 2027 packages are confirmed, our registered pilgrims get first access.",
     author: "Haji Zakir Mohammad Abbas",
     role: "CEO, Gazi Tour & Travels",
   },

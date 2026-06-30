@@ -36,7 +36,7 @@ export function FounderSection() {
             </span>
 
             <h2 className="font-display font-semibold text-display-md text-dark">
-              Leading Pilgrims Since 1998
+              Leading Pilgrims Since 2004
             </h2>
 
             <div className="mt-8">
