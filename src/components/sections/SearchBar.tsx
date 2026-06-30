@@ -17,7 +17,7 @@ export function SearchBar() {
   const getDurationOptions = (type: string) => {
     switch (type) {
       case "Hajj 2027": return ["30-40 Days (Shifting)", "15-20 Days (Non-Shifting)", "Other"];
-      case "Umrah Package": return ["10 Days", "14 Days", "21 Days", "Other"];
+      case "Umrah Package": return ["10 Days", "15 Days", "20 Days", "Other"];
       case "Iraq/Iran Ziyarat": return ["7 Days", "10 Days", "15 Days (Arbaeen)", "18 Days (Grand)", "Other"];
       case "Kashmir Tour": return ["5 Days", "7 Days", "10 Days", "Other"];
       default: return ["Other"];

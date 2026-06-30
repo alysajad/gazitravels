@@ -40,6 +40,7 @@ const contactInfo: Array<{
     details: [
       { label: "Head Office", value: "Magam, Budgam, Kashmir" },
       { label: "Branch", value: "Narbal, Dombail" },
+      { label: "Branch", value: "Wavoora Lolab, Kupwara" },
     ],
   },
 ];

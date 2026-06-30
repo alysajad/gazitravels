@@ -171,6 +171,7 @@ export function Footer() {
                   <div>
                     <span className="block">Head Office: Magam, Budgam, Kashmir</span>
                     <span className="block">Branch: Narbal, Dombail</span>
+                    <span className="block">Branch: Wavoora Lolab, Kupwara</span>
                   </div>
                 </div>
               </li>
